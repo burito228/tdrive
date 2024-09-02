@@ -1,150 +1,1094 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Опис проєкту
-			</div>
-			<h2>Готові сторінки:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Головна</a></li>
-			</ol>
-			<h2>Попапи:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Дякую за замовлення!</h2>
-				<p>Буду радий (да) гарному відгуку.</p>
-				<p>Звертайтесь ще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мої контакти:</h2>
-				<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. мережі: <a href="">посилання</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
-
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"HomePage" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="page">
+               <div class="overlay"></div>
+               <section class="welcome">
+                  <div class="welcome__container">
+                     <div class="welcome__wrap">
+                        <div class="welcome__slider swiper">
+                           <div class="welcome__wrapper swiper-wrapper">
+                              <div class="welcome__slide swiper-slide">
+                                 <div class="swiper-slide-wrapper">
+                                    <h1 class="swiper-slide-wrapper__title">
+                                       Широкий выбор запчастей для Вашей Tesla!
+                                    </h1>
+                                    <p class="swiper-slide-wrapper__desc">
+                                       Не упустите возможность приобрести
+                                       запчасти по выгодной цене, наша команда T
+                                       Drive поможет Вам с подбором.
+                                    </p>
+                                    <a
+                                       href="#"
+                                       class="swiper-slide-wrapper__link"
+                                       >Перейти в каталог</a
+                                    >
+                                 </div>
+                              </div>
+                              <div class="welcome__slide swiper-slide">
+                                 <div class="swiper-slide-wrapper">
+                                    <h1 class="swiper-slide-wrapper__title">
+                                       Широкий выбор запчастей для Вашей Tesla!
+                                    </h1>
+                                    <p class="swiper-slide-wrapper__desc">
+                                       Не упустите возможность приобрести
+                                       запчасти по выгодной цене, наша команда T
+                                       Drive поможет Вам с подбором.
+                                    </p>
+                                    <a
+                                       href="#"
+                                       class="swiper-slide-wrapper__link"
+                                       >Перейти в каталог</a
+                                    >
+                                 </div>
+                              </div>
+                              <div class="welcome__slide swiper-slide">
+                                 <div class="swiper-slide-wrapper">
+                                    <h1 class="swiper-slide-wrapper__title">
+                                       Широкий выбор запчастей для Вашей Tesla!
+                                    </h1>
+                                    <p class="swiper-slide-wrapper__desc">
+                                       Не упустите возможность приобрести
+                                       запчасти по выгодной цене, наша команда T
+                                       Drive поможет Вам с подбором.
+                                    </p>
+                                    <a
+                                       href="#"
+                                       class="swiper-slide-wrapper__link"
+                                       >Перейти в каталог</a
+                                    >
+                                 </div>
+                              </div>
+                              <div class="welcome__slide swiper-slide">
+                                 <div class="swiper-slide-wrapper">
+                                    <h1 class="swiper-slide-wrapper__title">
+                                       Широкий выбор запчастей для Вашей Tesla!
+                                    </h1>
+                                    <p class="swiper-slide-wrapper__desc">
+                                       Не упустите возможность приобрести
+                                       запчасти по выгодной цене, наша команда T
+                                       Drive поможет Вам с подбором.
+                                    </p>
+                                    <a
+                                       href="#"
+                                       class="swiper-slide-wrapper__link"
+                                       >Перейти в каталог</a
+                                    >
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="welcome-pagination">
+                              <div class="swiper-pagination"></div>
+                              <div class="welcome-navigation">
+                                 <div class="swiper-button-prev"></div>
+                                 <div class="swiper-button-next"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="service">
+                  <div class="service__container">
+                     <div class="service__wrapper">
+                        <div class="service-block">
+                           <div class="service-block-details">
+                              <img
+                                 class="service-block-details__img"
+                                 src="@img/icons/big/car-electro.svg"
+                                 alt="car"
+                              />
+                              <span class="service-block-details__num">01</span>
+                           </div>
+                           <h3 class="service-block__title">
+                              Собственный автосалон
+                           </h3>
+                           <p class="service-block__desc">
+                              для подбора и выдачи автомобилей
+                           </p>
+                        </div>
+                        <div class="service-block">
+                           <div class="service-block-details">
+                              <img
+                                 class="service-block-details__img"
+                                 src="@img/icons/big/garanty.svg"
+                                 alt="guard"
+                              />
+                              <span class="service-block-details__num">02</span>
+                           </div>
+                           <h3 class="service-block__title">
+                              Полная гарантия 2 месяца
+                           </h3>
+                           <p class="service-block__desc">
+                              на автомобили, купленные в T Drive
+                           </p>
+                        </div>
+                        <div class="service-block">
+                           <div class="service-block-details">
+                              <img
+                                 class="service-block-details__img"
+                                 src="@img/icons/big/message.svg"
+                                 alt="car"
+                              />
+                              <span class="service-block-details__num">03</span>
+                           </div>
+                           <h3 class="service-block__title">
+                              Консультация 24/7
+                           </h3>
+                           <p class="service-block__desc">
+                              с квалифицированным менеджером
+                           </p>
+                        </div>
+                        <div class="service-block">
+                           <div class="service-block-details">
+                              <img
+                                 class="service-block-details__img"
+                                 src="@img/icons/big/Delivery.svg"
+                                 alt="car"
+                              />
+                              <span class="service-block-details__num">04</span>
+                           </div>
+                           <h3 class="service-block__title">
+                              Доставка по всему миру
+                           </h3>
+                           <p class="service-block__desc">
+                              надежным трансфером
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="products">
+                  <div class="products__container">
+                     <div class="products-filter">
+                        <div class="products-filter-settings">
+                           <div
+                              class="products-filter-settings__btn settings-btn"
+                           >
+                              <button type="button" class="filter__btn active">
+                                 Все
+                              </button>
+                              <button type="button" class="filter__btn">
+                                 Распродажа
+                              </button>
+                              <button type="button" class="filter__btn">
+                                 Новинки
+                              </button>
+                              <button
+                                 type="button"
+                                 class="filter__btn filter__btn_icon"
+                              >
+                                 <img
+                                    src="@img/icons/small/fire.svg"
+                                    alt="fire"
+                                 />Хиты
+                              </button>
+                           </div>
+                           <div
+                              class="products-filter-settings__link settings-link"
+                           >
+                              <div class="settings-link__btn">
+                                 <button
+                                    type="button"
+                                    class="filter__btn active"
+                                 >
+                                    $
+                                 </button>
+                                 <button type="button" class="filter__btn">
+                                    ₴
+                                 </button>
+                              </div>
+                              <div class="settings-link__url">
+                                 <a href="#">Перейти в каталог</a>
+                                 <img
+                                    src="@img/icons//small/arrow-red.svg"
+                                    alt="arrow"
+                                 />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="products-wrapper">
+                        <div class="products-block">
+                           <a href="#" class="products-block-img">
+                              <img
+                                 src="@img/home/products/balka.png"
+                                 alt="balka"
+                              />
+                              <span
+                                 class="products-block-img__status products-block-img__status_stock"
+                              >
+                                 В наличии
+                              </span>
+                           </a>
+                           <div
+                              class="products-block-desc desc-head desc-price desc-quantity-item"
+                           >
+                              <div class="desc-head-item">
+                                 <h3 class="desc-head-item__title">
+                                    <a href="#">
+                                       Балка передняя поперечное усиление
+                                       стаканов (съемная) Tesla model S 2016
+                                    </a>
+                                 </h3>
+                                 <p class="desc-head-item__article">
+                                    Артикул <a href="#">S 1027461-00-G.</a>
+                                 </p>
+                              </div>
+                              <div class="desc-price-item">
+                                 <p class="desc-price-item__sale">
+                                    <span>350.00</span>$
+                                 </p>
+                                 <p class="desc-price-item__old">
+                                    <span>369.50</span>$
+                                 </p>
+                              </div>
+                              <div class="desc-quantity-item">
+                                 <div data-quantity class="quantity">
+                                    <button
+                                       data-quantity-minus
+                                       type="button"
+                                       class="quantity__button quantity__button_minus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                       <input
+                                          data-quantity-value
+                                          autocomplete="off"
+                                          type="text"
+                                          name="form[]"
+                                          value="1"
+                                       />
+                                    </div>
+                                    <button
+                                       data-quantity-plus
+                                       type="button"
+                                       class="quantity__button quantity__button_plus"
+                                    ></button>
+                                 </div>
+                                 <div class="desc-quantity-item__btn">
+                                    <button type="submit" class="button">
+                                       В корзину
+                                       <img
+                                          src="@img/icons/medium/shop.svg"
+                                          alt="shop"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="products-block">
+                           <a href="#" class="products-block-img">
+                              <img
+                                 src="@img/home/products/oporna.png"
+                                 alt="balka"
+                              />
+                              <span
+                                 class="products-block-img__status products-block-img__status_custom"
+                              >
+                                 Под заказ
+                              </span>
+                           </a>
+                           <div
+                              class="products-block-desc desc-head desc-price desc-quantity-item"
+                           >
+                              <div class="desc-head-item">
+                                 <h3 class="desc-head-item__title">
+                                    <a href="#">
+                                       Амортизатор пневмо передний без опорной
+                                       чашки и манжета Tesla Model S
+                                    </a>
+                                 </h3>
+                                 <p class="desc-head-item__article">
+                                    Артикул <a href="#">X 1027361-00-G.</a>
+                                 </p>
+                              </div>
+                              <div class="desc-price-item">
+                                 <p class="desc-price-item__sale">
+                                    <span>400.00 </span>$
+                                 </p>
+                                 <p class="desc-price-item__old">
+                                    <span>430.50 </span>$
+                                 </p>
+                              </div>
+                              <div class="desc-quantity-item">
+                                 <div data-quantity class="quantity">
+                                    <button
+                                       data-quantity-minus
+                                       type="button"
+                                       class="quantity__button quantity__button_minus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                       <input
+                                          data-quantity-value
+                                          autocomplete="off"
+                                          type="text"
+                                          name="form[]"
+                                          value="1"
+                                       />
+                                    </div>
+                                    <button
+                                       data-quantity-plus
+                                       type="button"
+                                       class="quantity__button quantity__button_plus"
+                                    ></button>
+                                 </div>
+                                 <div class="desc-quantity-item__btn">
+                                    <button type="submit" class="button">
+                                       В корзину
+                                       <img
+                                          src="@img/icons/medium/shop.svg"
+                                          alt="shop"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="products-block">
+                           <a href="#" class="products-block-img">
+                              <img
+                                 src="@img/home/products/bezoporna.png"
+                                 alt="balka"
+                              />
+                              <span
+                                 class="products-block-img__status products-block-img__status_new"
+                              >
+                                 Новое
+                              </span>
+                           </a>
+                           <div
+                              class="products-block-desc desc-head desc-price desc-quantity-item"
+                           >
+                              <div class="desc-head-item">
+                                 <h3 class="desc-head-item__title">
+                                    <a href="#">
+                                       Амортизатор пневмо передний без опорной
+                                       чашки и манжета Tesla Model S
+                                    </a>
+                                 </h3>
+                                 <p class="desc-head-item__article">
+                                    Артикул <a href="#">X 1027361-00-G</a>
+                                 </p>
+                              </div>
+                              <div class="desc-price-item">
+                                 <p class="desc-price-item__sale">
+                                    <span>400.00 </span>$
+                                 </p>
+                                 <p class="desc-price-item__old">
+                                    <span>430.50 </span>$
+                                 </p>
+                              </div>
+                              <div class="desc-quantity-item">
+                                 <div data-quantity class="quantity">
+                                    <button
+                                       data-quantity-minus
+                                       type="button"
+                                       class="quantity__button quantity__button_minus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                       <input
+                                          data-quantity-value
+                                          autocomplete="off"
+                                          type="text"
+                                          name="form[]"
+                                          value="1"
+                                       />
+                                    </div>
+                                    <button
+                                       data-quantity-plus
+                                       type="button"
+                                       class="quantity__button quantity__button_plus"
+                                    ></button>
+                                 </div>
+                                 <div class="desc-quantity-item__btn">
+                                    <button type="submit" class="button">
+                                       В корзину
+                                       <img
+                                          src="@img/icons/medium/shop.svg"
+                                          alt="shop"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="products-block">
+                           <a href="#" class="products-block-img">
+                              <img
+                                 src="@img/home/products/balka.png"
+                                 alt="balka"
+                              />
+                              <span
+                                 class="products-block-img__status products-block-img__status_stock"
+                              >
+                                 В наличии
+                              </span>
+                           </a>
+                           <div
+                              class="products-block-desc desc-head desc-price desc-quantity-item"
+                           >
+                              <div class="desc-head-item">
+                                 <h3 class="desc-head-item__title">
+                                    <a href="#">
+                                       Балка передняя поперечное усиление
+                                       стаканов (съемная) Tesla model S 2016
+                                    </a>
+                                 </h3>
+                                 <p class="desc-head-item__article">
+                                    Артикул <a href="#">S 1027461-00-G.</a>
+                                 </p>
+                              </div>
+                              <div class="desc-price-item">
+                                 <p class="desc-price-item__sale">
+                                    <span>350.00</span>$
+                                 </p>
+                                 <p class="desc-price-item__old">
+                                    <span>369.50</span>$
+                                 </p>
+                              </div>
+                              <div class="desc-quantity-item">
+                                 <div data-quantity class="quantity">
+                                    <button
+                                       data-quantity-minus
+                                       type="button"
+                                       class="quantity__button quantity__button_minus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                       <input
+                                          data-quantity-value
+                                          autocomplete="off"
+                                          type="text"
+                                          name="form[]"
+                                          value="1"
+                                       />
+                                    </div>
+                                    <button
+                                       data-quantity-plus
+                                       type="button"
+                                       class="quantity__button quantity__button_plus"
+                                    ></button>
+                                 </div>
+                                 <div class="desc-quantity-item__btn">
+                                    <button type="submit" class="button">
+                                       В корзину
+                                       <img
+                                          src="@img/icons/medium/shop.svg"
+                                          alt="shop"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="products-block">
+                           <a href="#" class="products-block-img">
+                              <img
+                                 src="@img/home/products/oporna.png"
+                                 alt="balka"
+                              />
+                              <span
+                                 class="products-block-img__status products-block-img__status_custom"
+                              >
+                                 Под заказ
+                              </span>
+                           </a>
+                           <div
+                              class="products-block-desc desc-head desc-price desc-quantity-item"
+                           >
+                              <div class="desc-head-item">
+                                 <h3 class="desc-head-item__title">
+                                    <a href="#">
+                                       Амортизатор пневмо передний без опорной
+                                       чашки и манжета Tesla Model S
+                                    </a>
+                                 </h3>
+                                 <p class="desc-head-item__article">
+                                    Артикул <a href="#">X 1027361-00-G.</a>
+                                 </p>
+                              </div>
+                              <div class="desc-price-item">
+                                 <p class="desc-price-item__sale">
+                                    <span>400.00 </span>$
+                                 </p>
+                                 <p class="desc-price-item__old">
+                                    <span>430.50 </span>$
+                                 </p>
+                              </div>
+                              <div class="desc-quantity-item">
+                                 <div data-quantity class="quantity">
+                                    <button
+                                       data-quantity-minus
+                                       type="button"
+                                       class="quantity__button quantity__button_minus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                       <input
+                                          data-quantity-value
+                                          autocomplete="off"
+                                          type="text"
+                                          name="form[]"
+                                          value="1"
+                                       />
+                                    </div>
+                                    <button
+                                       data-quantity-plus
+                                       type="button"
+                                       class="quantity__button quantity__button_plus"
+                                    ></button>
+                                 </div>
+                                 <div class="desc-quantity-item__btn">
+                                    <button type="submit" class="button">
+                                       В корзину
+                                       <img
+                                          src="@img/icons/medium/shop.svg"
+                                          alt="shop"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="products-block">
+                           <a href="#" class="products-block-img">
+                              <img
+                                 src="@img/home/products/bezoporna.png"
+                                 alt="balka"
+                              />
+                              <span
+                                 class="products-block-img__status products-block-img__status_new"
+                              >
+                                 Новое
+                              </span>
+                           </a>
+                           <div
+                              class="products-block-desc desc-head desc-price desc-quantity-item"
+                           >
+                              <div class="desc-head-item">
+                                 <h3 class="desc-head-item__title">
+                                    <a href="#">
+                                       Амортизатор пневмо передний без опорной
+                                       чашки и манжета Tesla Model S
+                                    </a>
+                                 </h3>
+                                 <p class="desc-head-item__article">
+                                    Артикул <a href="#">X 1027361-00-G</a>
+                                 </p>
+                              </div>
+                              <div class="desc-price-item">
+                                 <p class="desc-price-item__sale">
+                                    <span>400.00 </span>$
+                                 </p>
+                                 <p class="desc-price-item__old">
+                                    <span>430.50 </span>$
+                                 </p>
+                              </div>
+                              <div class="desc-quantity-item">
+                                 <div data-quantity class="quantity">
+                                    <button
+                                       data-quantity-minus
+                                       type="button"
+                                       class="quantity__button quantity__button_minus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                       <input
+                                          data-quantity-value
+                                          autocomplete="off"
+                                          type="text"
+                                          name="form[]"
+                                          value="1"
+                                       />
+                                    </div>
+                                    <button
+                                       data-quantity-plus
+                                       type="button"
+                                       class="quantity__button quantity__button_plus"
+                                    ></button>
+                                 </div>
+                                 <div class="desc-quantity-item__btn">
+                                    <button type="submit" class="button">
+                                       В корзину
+                                       <img
+                                          src="@img/icons/medium/shop.svg"
+                                          alt="shop"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="tesmontials">
+                  <div class="tesmontials__container">
+                     <div class="tesmontials-heading">
+                        <h2 class="tesmontials-heading__title">Отзывы</h2>
+                        <a href="#" class="tesmontials-heading__link"
+                           >Все отзывы
+                           <img
+                              src="@img/icons/small/arrow-red.svg"
+                              alt="arrow"
+                        /></a>
+                     </div>
+                     <div class="tesmontials__slider swiper">
+                        <div class="tesmontials__wrapper swiper-wrapper">
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero2.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Александр Зотов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Товар был отличный, как новый, срок
+                                       доставки был очень короткий, а контакт
+                                       был таким же отличным. Я действительно
+                                       могу рекомендовать эту компанию. Большая
+                                       благодарность из Германии.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero3.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Ольга Бондаренко
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Меня очень хорошо обслужили. запчасть в
+                                       очень хорошем состоянии, почти новая и по
+                                       отличной цене. Привет из Германии
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero4.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Алексей Быков
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой. Сотрудничеством с автосалоном
+                                       довольный.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero2.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Александр Зотов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Товар был отличный, как новый, срок
+                                       доставки был очень короткий, а контакт
+                                       был таким же отличным. Я действительно
+                                       могу рекомендовать эту компанию. Большая
+                                       благодарность из Германии.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero3.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Ольга Бондаренко
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Меня очень хорошо обслужили. запчасть в
+                                       очень хорошем состоянии, почти новая и по
+                                       отличной цене. Привет из Германии
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="welcome__slide swiper-slide">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero4.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Алексей Быков
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой. Сотрудничеством с автосалоном
+                                       довольный.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="tesmon-pagination welcome-pagination">
+                           <div class="tesmontials-pagination"></div>
+                           <div
+                              class="tesmontials-navigation welcome-navigation"
+                           >
+                              <div class="swiper-button-prev"></div>
+                              <div class="swiper-button-next"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
 </html>

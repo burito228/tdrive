@@ -1,3 +1,116 @@
 //====================================================================================================
+.footer {
+   background: $black;
+   @include adaptiveValue("padding-top", 70, 50);
 
+   &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   &-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+      img {
+         width: fit-content;
+      }
+      &__desc {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         line-height: 140%;
+         font-weight: 400;
+         color: $placeholder;
+         @include adaptiveValue("font-size", 14, 12);
+      }
+   }
+   &-navigation {
+      display: flex;
+      justify-content: space-evenly;
+      &-block {
+         &__title {
+            line-height: 150%;
+            color: $placeholder;
+            font-weight: 500;
+            @include adaptiveValue("font-size", 18, 14);
+            @include adaptiveValue("margin-bottom", 25, 15);
+         }
+         &__list {
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            line-height: 140%;
+            @include adaptiveValue("gap", 20, 10);
+            @include adaptiveValue("font-size", 16, 12);
+            span {
+               color: $placeholder;
+            }
+         }
+      }
+   }
+   &-contact {
+      &-phone {
+         @include adaptiveValue("margin-bottom", 25, 30);
+         &__title {
+            margin-bottom: 3px;
+            line-height: 125%;
+            font-weight: 500;
+            @include adaptiveValue("font-size", 22, 17);
+         }
+         &__call {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+         }
+      }
+      &-links {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom: 1px solid $stroke;
+         @include adaptiveValue("padding-bottom", 25, 30);
+         img {
+            @include adaptiveValue("width", 25, 20);
+            @include adaptiveValue("height", 25, 20);
+         }
+      }
+      &-graffic {
+         display: flex;
+         flex-wrap: wrap;
+         @include adaptiveValue("margin-top", 25, 30);
+         @include adaptiveValue("gap", 25, 15);
+
+         &__block {
+            &:first-of-type {
+               width: 100%;
+            }
+            p {
+               line-height: 150%;
+               font-weight: 500;
+               @include adaptiveValue("font-size", 18, 14);
+            }
+            h5 {
+               line-height: 140%;
+               color: $placeholder;
+               font-weight: 400;
+               @include adaptiveValue("font-size", 16, 12);
+            }
+         }
+      }
+   }
+   &__desc {
+      background: #111014;
+      @include adaptiveValue("padding-top", 10, 15);
+      @include adaptiveValue("padding-bottom", 10, 15);
+      @include adaptiveValue("margin-top", 70, 50);
+      span {
+         display: block;
+         text-align: center;
+         line-height: 140%;
+         font-weight: 500;
+         @include adaptiveValue("font-size", 14, 12);
+      }
+   }
+}
 //====================================================================================================

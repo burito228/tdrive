@@ -1,1 +1,32 @@
 // Заголовки, загальні БЕМ блоки та інше...
+input,
+button,
+select {
+   border: none;
+   outline: none;
+   cursor: pointer;
+}
+.search-input {
+   padding: 18px 15px 18px 45px;
+   border: 1px solid $stroke;
+   color: $black;
+   @include adaptiveValue("width", 567, 235);
+}
+.filter__btn {
+   font-size: 16px;
+   color: $grayText;
+   font-weight: 500;
+   line-height: 140%;
+   padding: 13px 24px;
+   border: 1px solid $stroke;
+
+   &_icon {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+   }
+   &.active {
+      color: $mainColor;
+      background: $black;
+   }
+}

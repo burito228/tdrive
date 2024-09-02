@@ -1,54 +1,58 @@
 //<QUANTITY>
 // Сніппет (HTML): qa
 .quantity {
-	width: 88px;
-	height: 40px;
-	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
-	// .quantity__button
-	&__button {
-		flex: 0 0 30px;
-		position: relative;
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
-			width: 9px;
-			height: 1px;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before,
-				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
-		// .quantity__button_plus
-		&--plus {
-			&::before {
-				transform: rotate(-90deg);
-			}
-		}
-		// .quantity__button_minus
-		&--minus {
-		}
-	}
-	// .quantity__input
-	&__input {
-		flex: 1 1 auto;
-		input {
-			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
-			width: 100%;
-			text-align: center;
-		}
-	}
+   display: flex;
+   border: 1px solid $stroke;
+   // .quantity__button
+   &__button {
+      flex: 0 0 60px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.5s ease;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transition: all 0.3s ease 0s;
+         margin: 0px 0px 0px -4.5px;
+         background-color: #8e8d91;
+         width: 13px;
+         height: 1.5px;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background: $black;
+            &::before,
+            &::after {
+               background-color: $mainColor;
+            }
+         }
+      }
+      // .quantity__button_plus
+      &_plus {
+         border-left: 1px solid $stroke;
+         &::before {
+            transform: rotate(-90deg);
+         }
+      }
+      // .quantity__button_minus
+      &_minus {
+         border-right: 1px solid $stroke;
+      }
+   }
+   // .quantity__input
+   &__input {
+      flex: 1 1 auto;
+      input {
+         height: 100%;
+         line-height: 150%;
+         font-weight: 500;
+         color: $black;
+         font-size: 18px;
+         width: 100%;
+         text-align: center;
+      }
+   }
 }

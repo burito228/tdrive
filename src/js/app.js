@@ -12,7 +12,7 @@
 */
 
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = true;
+window["FLS"] = true;
 
 // Підключення основного файлу стилів
 import "../scss/style.scss";
@@ -120,13 +120,13 @@ flsForms.formFieldsInit({
 // flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
-// flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль зіркового рейтингу */
 // flsForms.formRating();
 
 /* Модуль роботи з select. */
-// import './libs/select.js'
+import "./libs/select.js";
 
 /* Модуль роботи з календарем */
 // import './files/forms/datepicker.js'
@@ -138,7 +138,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://github.com/RobinHerbots/inputmask
 Сніппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль роботи з повзунком */
 /*
@@ -167,7 +167,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модулі роботи з прокручуванням сторінки ========================================================================================================================================================================================================================================================
