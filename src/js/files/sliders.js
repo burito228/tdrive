@@ -147,14 +147,13 @@ function initSliders() {
          observeParents: true,
          slidesPerView: 4,
          spaceBetween: 20,
-         //autoHeight: true,
          speed: 800,
 
          //touchRatio: 0,
          //simulateTouch: false,
-         //loop: true,
+         // loop: true,
          //preloadImages: false,
-         //lazy: true,
+         lazy: true,
 
          /*
 			// Ефекти
@@ -179,56 +178,50 @@ function initSliders() {
          },
 
          // Скроллбар
-         /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+
+         // scrollbar: {
+         //    el: ".swiper-scrollbar",
+         //    draggable: true,
+         // },
 
          // Кнопки "вліво/вправо"
          navigation: {
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
          },
-         /*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
+
+         // Брейкпоінти
+         breakpoints: {
+            // 640: {
+            // 	slidesPerView: 1,
+            // 	spaceBetween: 0,
+            // 	autoHeight: true,
+            // },
+            320: {
+               slidesPerView: 1,
+               // direction: "vertical",
+               spaceBetween: 20,
+               // height: 600,
+            },
+            767: {
+               slidesPerView: 2,
+               // direction: "vertical",
+               spaceBetween: 20,
+               // height: 600,
+               // grid: {
+               //    rows: 2,
+               // },
+            },
+            1199: {
+               slidesPerView: 3,
+            },
+            1500: {
+               slidesPerView: 4,
+            },
+         },
+
          // Події
          on: {
-            init: function () {
-               // Обновляем пагинацию при инициализации
-               let bullets = document.querySelectorAll(
-                  ".tesmontials-pagination .swiper-pagination-bullet"
-               );
-               bullets.forEach((bullet, index) => {
-                  if (index === this.realIndex) {
-                     bullet.innerHTML =
-                        index + 1 <= 9 ? `0${index + 1}` : `${index + 1}`;
-                  } else {
-                     bullet.innerHTML = "•";
-                  }
-               });
-            },
             slideChange: function () {
                // Обновляем пагинацию после смены слайда
                let bullets = document.querySelectorAll(
@@ -242,11 +235,28 @@ function initSliders() {
                      bullet.innerHTML = "•";
                   }
                });
+               this.updateSlidesClasses();
+            },
+            init: function () {
+               // Обновляем пагинацию при инициализации
+               let bullets = document.querySelectorAll(
+                  ".tesmontials-pagination .swiper-pagination-bullet"
+               );
+               bullets.forEach((bullet, index) => {
+                  if (index === this.realIndex) {
+                     bullet.innerHTML =
+                        index + 1 <= 9 ? `0${index + 1}` : `${index + 1}`;
+                  } else {
+                     bullet.innerHTML = "•";
+                  }
+               });
+               this.updateSlidesClasses();
             },
          },
       });
    }
 }
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
    let sliderScrollItems = document.querySelectorAll(".swiper_scroll");

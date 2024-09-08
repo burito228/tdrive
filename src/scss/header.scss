@@ -1,6 +1,9 @@
 .sub-menu-open main > .overlay {
    display: block;
    opacity: 0.7;
+   @media (max-width: $tablet) {
+      display: none;
+   }
 }
 main {
    position: relative;
@@ -20,6 +23,9 @@ main {
    position: relative;
 
    &-category {
+      @media (max-width: $tablet) {
+         display: none;
+      }
       &__wrapper {
          display: flex;
          align-items: center;
@@ -53,8 +59,8 @@ main {
       }
       &__cart {
          background: $red;
-         padding: 16px;
          position: relative;
+         @include adaptiveValue("padding", 16, 12.5);
          span {
             background: $black;
             font-size: 14px;
@@ -67,15 +73,47 @@ main {
          }
       }
    }
+   .sub-menu-open &-phone {
+      flex-direction: unset;
+      align-items: center;
+      gap: 20px;
+   }
    &-phone {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-
+      @media (max-width: $tablet) {
+         flex-direction: unset;
+         align-items: center;
+         justify-content: space-between;
+      }
+      .sub-menu-open &__wrapper {
+         display: flex;
+         gap: 20px;
+         align-items: center;
+      }
+      &__wrapper {
+         @media (max-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 toRem(15);
+         }
+      }
+      .sub-menu-open &__title {
+         display: block;
+         font-size: toRem(18);
+      }
       &__title {
          color: #313b45;
          line-height: calc(140 / 100 * 24px);
          @include adaptiveValue("font-size", 24, 17);
+         @media (min-width: $tablet) {
+            display: none;
+         }
+         @media (max-width: $tablet) {
+            color: $black;
+         }
       }
       &__link {
          display: flex;
@@ -83,9 +121,11 @@ main {
          align-items: center;
          a {
             color: $red;
-            font-size: 16px;
             transition: color 0.5s ease;
-
+            @include adaptiveValue("font-size", 16, 12);
+            @media (max-width: $tablet) {
+               font-weight: 600;
+            }
             &:hover {
                color: $black;
             }
@@ -93,15 +133,28 @@ main {
       }
    }
 }
+.sub-menu-open .preheader {
+   background: $bgGray;
+}
 .preheader {
    display: flex;
    justify-content: space-between;
    align-items: center;
    font-size: 16px;
    &-block {
+      flex-grow: 1;
+      @media (max-width: $tablet) {
+         padding: toRem(30) toRem(15);
+      }
       &__list {
          display: flex;
          gap: 20px;
+         @media (max-width: $tablet) {
+            gap: toRem(10);
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+         }
          a {
             color: $grayText;
             font-weight: 400;
@@ -117,6 +170,9 @@ main {
       color: $black;
       gap: 10px;
       font-weight: 500;
+      @media (max-width: $tablet) {
+         display: none;
+      }
 
       a {
          padding: 10px 15px;
@@ -137,9 +193,18 @@ main {
    margin-top: 15px;
    font-size: 16px;
    font-weight: 500;
-
+   @media (max-width: $tablet) {
+      justify-content: center;
+   }
+   .header-phone__title {
+      display: none;
+   }
    &__logo {
       transition: all 0.5s ease;
+      img {
+         @include adaptiveValue("width", 175, 112);
+         @include adaptiveValue("height", 25, 16);
+      }
       &:hover {
          opacity: 0.5;
       }
@@ -217,6 +282,7 @@ main {
       left: -100%;
       width: 100%;
       height: 100%;
+      background: $mainColor;
       overflow: auto;
       padding: toRem(25) toRem(15) toRem(50) toRem(15);
       transition: left 0.3s ease 0s;
@@ -232,22 +298,36 @@ main {
       justify-content: space-between;
       @media (max-width: $tablet) {
          flex-direction: column;
-         row-gap: toRem(25);
       }
    }
    // .menu-catalog__item
    &__item {
    }
-   // .menu-catalog__link
    &__link {
+      @media (max-width: 1400px) {
+         flex-direction: column;
+      }
+      @media (max-width: $tablet) {
+         flex-direction: unset;
+      }
+   }
+   // .menu-catalog__link
+   &__link,
+   .sub-menu-catalog__link-category {
       position: relative;
       transition: color 0.3s ease 0s;
       color: $black;
+      padding: 10px 0;
       font-size: toRem(16);
       font-weight: 500;
       line-height: 140%;
       display: flex;
       gap: 5px;
+      @media (max-width: $tablet) {
+         background: url("@img/header/icon/gray-arrow.svg") no-repeat center
+            right;
+         font-size: toRem(14);
+      }
       span {
          color: $grayText;
       }
@@ -282,8 +362,6 @@ main {
          @media (max-width: $tablet) {
             display: flex;
             width: 100%;
-            flex-direction: row-reverse;
-            justify-content: space-between;
          }
       }
       @media (min-width: $tablet) {
@@ -335,7 +413,7 @@ main {
          }
       }
       @media (max-width: $tablet) {
-         @include adaptiveValue("font-size", 30, 20, 992, 320, 1);
+         @include adaptiveValue("font-size", 30, 14);
       }
    }
    // .menu-catalog__sub-menu
@@ -355,14 +433,18 @@ main {
       border-top: 1px solid $bgGray;
       display: none;
    }
-   &__back {
+   &__back,
+   .sub-menu-catalog__back {
       display: none;
       @media (max-width: $tablet) {
          display: inline-flex;
+         color: $red;
          align-items: center;
-         @include adaptiveValue("font-size", 30, 20, 992, 320, 1);
-         &:not(:last-child) {
-            margin-bottom: em(65, 30);
+         gap: 10px;
+         padding: toRem(10) 0;
+         @include adaptiveValue("font-size", 30, 12);
+         img {
+            transform: rotate(90deg);
          }
          &::before {
             margin: 0px em(13, 30) 0px 0px;
@@ -378,11 +460,10 @@ main {
       width: 100%;
       height: 100%;
       overflow: auto;
-      // background-color: $mainDarkColor;
+      background-color: $mainColor;
       padding: toRem(25) toRem(15) toRem(50) toRem(15);
       transition: left 0.3s ease 0s;
       .sub-menu-open & {
-         display: block;
          left: 0;
          z-index: 6;
       }
@@ -392,7 +473,8 @@ main {
       @media (max-width: $tablet) {
          display: inline-flex;
          align-items: center;
-         @include adaptiveValue("font-size", 30, 20, 992, 320, 1);
+         color: $red;
+         @include adaptiveValue("font-size", 30, 12, 992, 320, 1);
          &:not(:last-child) {
             margin-bottom: em(65, 30);
          }
@@ -410,15 +492,16 @@ main {
             grid-template-columns: repeat($var, minmax(auto, 1fr));
          }
       }
-      &._sub-menu-open {
-         display: grid;
-         @media (max-width: $tablet) {
-            display: block;
-         }
+   }
+   &__block._sub-menu-open {
+      display: grid;
+      @media (max-width: $tablet) {
+         display: block;
       }
    }
    &__container {
       padding: 0px toRem(10);
+      color: $black;
    }
    // .sub-menu-catalog__category
    &__category {
@@ -445,6 +528,71 @@ main {
       @media (max-width: $tablet) {
          display: none;
       }
+      &_mobile {
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: $mainColor;
+         z-index: 1;
+         overflow: auto;
+         display: flex;
+         transition: all 0.3s ease;
+         padding-right: 15px;
+         button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $red;
+            padding: 10px 0 20px 15px;
+            font-size: 12px;
+            font-weight: 500;
+            img {
+               transform: rotate(90deg);
+            }
+         }
+         &._sub-menu-open {
+            left: 0;
+         }
+         li {
+            background: url(../img/header/icon/gray-arrow.svg) no-repeat center
+               right;
+         }
+
+         .sub-menu-catalog__item ul {
+            transition: all 0.5s ease;
+         }
+         .sub-menu-catalog__item ul li > ul {
+            transition: all 0.5s ease;
+            right: unset;
+            left: -100%;
+         }
+         .sub-menu-catalog__item.open > ul {
+            right: 0;
+            background: $mainColor;
+            z-index: 2;
+            height: calc(100vh - -140px);
+            padding-right: 15px;
+         }
+         .sub-menu-catalog__item ul.open li > ul {
+            left: 0;
+            background: $mainColor;
+            z-index: 3;
+            height: 100vh;
+            padding-right: 15px;
+         }
+
+         // .sub-menu-catalog__item:hover > ul {
+         //    right: 0;
+         //    background: $mainColor;
+         // }
+         // .sub-menu-catalog__item ul li:hover ul {
+         //    right: 0;
+         //    background: $mainColor;
+         // }
+      }
+
       li {
          transition: all 0.3s ease;
          color: $black;
@@ -510,5 +658,158 @@ main {
             text-decoration: underline;
          }
       }
+   }
+}
+//Burger
+
+.menu {
+   display: none;
+   // .menu__body
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+   }
+   &__btn {
+      border: 1px solid $stroke;
+      padding: 13.5px;
+      .menu-open &:last-of-type {
+         display: none;
+      }
+   }
+   &__body {
+      left: -100%;
+      @media (max-width: $tablet) {
+         display: flex;
+         flex-direction: column;
+         padding-bottom: toRem(24);
+         max-height: calc(100vh - 140px);
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 145px;
+         overflow: auto;
+         background-color: $mainColor;
+         transition: left 0.3s ease 0s;
+         z-index: 4;
+         .menu-open & {
+            left: 0;
+            &::before {
+               left: 0;
+            }
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+   }
+}
+.menu-open .icon-menu {
+   background: $black;
+}
+.icon-menu {
+   @media (max-width: $tablet) {
+      background: $bgGray;
+      display: block;
+      position: relative;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         left: 50%;
+         position: absolute;
+         width: 14px;
+         height: 2px;
+         background-color: $red;
+         transform: translate(-50%, -50%);
+      }
+      &::before {
+         top: 12px;
+      }
+      &::after {
+         bottom: 12px;
+      }
+      span {
+         top: calc(50% - 1px);
+      }
+      .menu-open & {
+         span {
+            transform: scale(0);
+         }
+         &::before {
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+            background-color: $mainColor;
+            left: 38%;
+         }
+         &::after {
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+            background-color: $mainColor;
+            left: 38%;
+         }
+      }
+   }
+}
+.menu-top-header {
+   // ..menu-top-header__list
+   &__list {
+      display: flex;
+      border-top: 1px solid $stroke;
+      border-bottom: 1px solid $stroke;
+      @include adaptiveValue("column-gap", 60, 20);
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         padding: toRem(30) toRem(15);
+      }
+   }
+   // ..menu-top-header__item
+   &__item {
+      &_catalog {
+         @media (min-width: $tablet) {
+            display: none;
+         }
+      }
+   }
+   // ..menu-top-header__link
+   &__link {
+      font-size: toRem(17);
+      color: $black;
+      font-weight: 500;
+      line-height: 125%;
+      span {
+         color: $grayText;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+      &_catalog {
+         display: flex;
+         align-items: center;
+         &::before {
+            flex: 0 0 14px;
+            height: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: toRem(8);
+            transform: translateY(toRem(-2)) rotate(-90deg);
+            @media (max-width: $tablet) {
+               display: none;
+            }
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      display: none;
    }
 }

@@ -13,12 +13,15 @@ select {
    @include adaptiveValue("width", 567, 235);
 }
 .filter__btn {
-   font-size: 16px;
    color: $grayText;
    font-weight: 500;
    line-height: 140%;
    padding: 13px 24px;
    border: 1px solid $stroke;
+   @include adaptiveValue("font-size", 16, 12);
+   @media (max-width: $mobile) {
+      padding: 10px;
+   }
 
    &_icon {
       display: flex;
