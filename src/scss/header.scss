@@ -17,6 +17,10 @@ main {
    background: #1c1b22;
    height: 100%;
    display: none;
+   &.active {
+      display: block;
+      opacity: 0.7;
+   }
 }
 .header {
    padding: 15px 0;

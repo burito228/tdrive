@@ -157,3 +157,33 @@ document.addEventListener("DOMContentLoaded", function () {
       moveElements();
    }
 });
+
+document.querySelectorAll(".catalog-sidebar__title").forEach((title) => {
+   title.addEventListener("click", function () {
+      this.nextElementSibling.classList.add("active");
+      document.querySelector(".overlay").classList.add("active");
+      document.documentElement.classList.add("lock");
+   });
+});
+
+document
+   .querySelectorAll(".catalog-sidebar-category__close")
+   .forEach((closeBtn) => {
+      closeBtn.addEventListener("click", function () {
+         document
+            .querySelectorAll(".catalog-sidebar-category.active")
+            .forEach((activeCategory) => {
+               activeCategory.classList.remove("active");
+            });
+         document.querySelector(".overlay").classList.remove("active");
+         document.documentElement.classList.remove("lock");
+      });
+   });
+document.querySelector(".overlay").addEventListener("click", function () {
+   this.classList.remove("active");
+   document
+      .querySelectorAll(".catalog-sidebar-category.active")
+      .forEach((activeCategory) => {
+         activeCategory.classList.remove("active");
+      });
+});
