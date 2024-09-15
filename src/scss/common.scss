@@ -11,6 +11,11 @@ select {
    border: 1px solid $stroke;
    color: $black;
    @include adaptiveValue("width", 567, 235);
+   &:focus {
+      caret-color: $red;
+      background: url("@img/icons/small/search.svg") no-repeat;
+      background-position: 15px 50%;
+   }
 }
 .filter__btn {
    color: $grayText;

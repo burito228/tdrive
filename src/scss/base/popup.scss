@@ -1,61 +1,181 @@
 body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.8s ease 0s;
-	pointer-events: none;
-	z-index: 149;
+   content: "";
+   background-color: rgba(0, 0, 0, 0.5);
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   transition: opacity 0.8s ease 0s;
+   pointer-events: none;
+   z-index: 149;
 }
 .popup-show body::after {
-	opacity: 1;
+   opacity: 1;
 }
 .popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
+   position: fixed;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 0;
+   right: 0;
+   transition: visibility 0.8s ease 0s;
+   visibility: hidden;
+   pointer-events: none;
+   &-close-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .payment-block__title {
+         color: $black;
+         font-weight: 500;
+         line-height: 125%;
+         @include adaptiveValue("font-size", 22, 17);
+      }
+   }
+   &__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      transform: scale(0.6);
+   }
+   &__products {
+      .search-block {
+         display: grid;
+         grid-template-columns: 100px 1fr;
+         gap: 20px;
+         align-items: center;
+         @media (max-width: $tablet) {
+            align-items: start;
+         }
+         @media (max-width: $mobile) {
+            grid-template-columns: 60px 1fr;
+            gap: 15px;
+         }
+         &-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include adaptiveValue("width", 115, 60);
+            @include adaptiveValue("height", 115, 60);
+            &:hover img {
+               opacity: 0.7;
+            }
+            img {
+               transition: all 0.5s ease;
+               @include adaptiveValue("width", 115, 60);
+               @include adaptiveValue("height", 115, 60);
+            }
+         }
+         &-desc {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &__info {
+               color: #141414;
+               line-height: 140%;
+               font-weight: 500;
+               @include adaptiveValue("font-size", 16, 12);
+            }
+         }
+      }
+   }
+   .desc-quantity-item__btn {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      @media (max-width: 1600px) {
+         flex-direction: column-reverse;
+         align-items: center;
+      }
+      button {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         background: $red;
+         transition: background 0.5s ease;
+         padding: 15px 65px;
+         @media (max-width: 1400px) {
+            padding: 13.5px 35px;
+            font-size: toRem(14);
+         }
+         @media (max-width: $tablet) {
+            padding: 13.5px 30px;
+         }
+         @media (max-width: $mobileSmall) {
+            width: 100%;
+            justify-content: center;
+         }
+
+         &:hover {
+            background: $black;
+         }
+      }
+   }
+   .settings-link__url {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 9px;
+      align-items: center;
+      color: $red;
+      transition: color 0.5s ease;
+      a {
+         font-weight: 500;
+         line-height: 150%;
+         @include adaptiveValue("font-size", 18, 14);
+      }
+      img {
+         transform: rotate(180deg);
+      }
+      @media (max-width: $tablet) {
+         justify-content: right;
+         img {
+            width: 11px;
+            height: 13px;
+         }
+      }
+      &:hover {
+         color: $black;
+      }
+   }
 }
 .popup_show {
-	z-index: 150;
-	visibility: visible;
-	overflow: auto;
-	pointer-events: auto;
+   z-index: 150;
+   visibility: visible;
+   overflow: auto;
+   pointer-events: auto;
 }
 .popup_show .popup__content {
-	visibility: visible;
-	transform: scale(1);
+   visibility: visible;
+   transform: scale(1);
 }
 .popup__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100%;
-	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100%;
+   flex: 1 1 auto;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
 }
 .popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
-	.lock & {
-		visibility: visible;
-	}
+   visibility: hidden;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   transform: scale(0);
+   transition: transform 0.3s ease 0s;
+   background-color: #fff;
+   padding: 30px;
+   max-width: 520px;
+   @include adaptiveValue("width", 520, 290);
+   .lock & {
+      visibility: visible;
+   }
+   @media (max-width: $mobileSmall) {
+      position: relative;
+   }
 }

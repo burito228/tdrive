@@ -1,5 +1,6 @@
 .sub-menu-open main > .overlay {
    display: block;
+   top: 0;
    opacity: 0.7;
    @media (max-width: $tablet) {
       display: none;
@@ -52,13 +53,117 @@ main {
    &-search {
       display: flex;
       gap: 10px;
+      position: relative;
       &__item {
          position: relative;
+         .search-input:focus + img {
+            display: none;
+         }
          img {
             position: absolute;
             left: 25px;
             top: 50%;
             transform: translate(-50%, -50%);
+         }
+      }
+      &__list {
+         display: none;
+         background: $mainColor;
+         position: absolute;
+         top: 56px;
+         width: 100%;
+         z-index: 2;
+         @include adaptiveValue("padding", 30, 15);
+         .search-list {
+            &-wrapper {
+               display: flex;
+               flex-direction: column;
+               overflow: auto;
+               max-height: 200px;
+               &::-webkit-scrollbar {
+                  width: 3px;
+                  /* Ширина вертикального скролу */
+               }
+
+               /* Стилі для кнопки скролу */
+
+               &::-webkit-scrollbar-thumb {
+                  background: $red;
+                  /* Колір кнопки скролу */
+               }
+
+               /* Стилі для фону скролу */
+
+               &::-webkit-scrollbar-track {
+                  background: $stroke;
+                  /* Колір фону скролу */
+               }
+
+               /* Прибрати дефолтні стрілки */
+
+               &::-webkit-scrollbar-button {
+                  display: none;
+               }
+               @include adaptiveValue("padding-right", 20, 15);
+               @include adaptiveValue("gap", 15, 20);
+
+               .search-block {
+                  display: grid;
+                  grid-template-columns: 100px 1fr;
+                  gap: 20px;
+                  align-items: center;
+                  @media (max-width: $tablet) {
+                     align-items: start;
+                  }
+                  @media (max-width: $mobile) {
+                     grid-template-columns: 60px 1fr;
+                     gap: 15px;
+                  }
+                  &-img {
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     background: url("@img/catalog/bg-product.png") no-repeat;
+                     @include adaptiveValue("width", 100, 60);
+                     @include adaptiveValue("height", 100, 60);
+                     &:hover img {
+                        opacity: 0.7;
+                     }
+                     img {
+                        transition: all 0.5s ease;
+                        @include adaptiveValue("width", 69, 42);
+                        @include adaptiveValue("height", 60, 36);
+                     }
+                  }
+                  &-desc {
+                     display: flex;
+                     flex-direction: column;
+                     gap: 10px;
+                     &__info {
+                        color: $grayText;
+                        line-height: 140%;
+                        font-weight: 500;
+                        @include adaptiveValue("font-size", 16, 12);
+                     }
+                     &__price {
+                        line-height: 150%;
+                        display: flex;
+                        gap: 15px;
+                        &_new {
+                           font-weight: 500;
+                           color: $red;
+                           @include adaptiveValue("font-size", 18, 14);
+                        }
+                        &_old {
+                           color: #8e8d91;
+                           font-weight: 400;
+                           text-decoration: line-through;
+                           @include adaptiveValue("font-size", 14, 12);
+                        }
+                     }
+                  }
+               }
+            }
          }
       }
       &__cart {

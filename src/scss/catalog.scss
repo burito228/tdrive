@@ -1,8 +1,14 @@
 .breadcrumbs {
    @include adaptiveValue("padding-bottom", 40, 25);
+   @media (max-width: $mobileSmall) {
+      overflow-x: auto;
+   }
    &-nav {
       display: flex;
       gap: 28px;
+      @media (max-width: $mobileSmall) {
+         width: toRem(1000);
+      }
       &__link {
          color: $grayText;
          position: relative;
@@ -123,6 +129,10 @@
          }
       }
       &-category {
+         &_height {
+            height: 655px;
+            overflow: auto;
+         }
          &__wrap {
             position: relative;
          }
@@ -168,8 +178,6 @@
             gap: unset;
             @media (max-width: $tablet) {
                padding: 10px 15px;
-               height: 600px;
-               overflow: auto;
             }
             &__item {
                color: $black;

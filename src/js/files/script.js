@@ -186,4 +186,38 @@ document.querySelector(".overlay").addEventListener("click", function () {
       .forEach((activeCategory) => {
          activeCategory.classList.remove("active");
       });
+   document.documentElement.classList.remove("lock");
 });
+
+//Gallery//
+var splide = new Splide(".single-gallery-wrap", {
+   pagination: false,
+});
+
+var thumbnails = document.getElementsByClassName("thumbnail");
+var current;
+
+for (var i = 0; i < thumbnails.length; i++) {
+   initThumbnail(thumbnails[i], i);
+}
+
+function initThumbnail(thumbnail, index) {
+   thumbnail.addEventListener("click", function () {
+      splide.go(index);
+   });
+}
+
+splide.on("mounted move", function () {
+   var thumbnail = thumbnails[splide.index];
+
+   if (thumbnail) {
+      if (current) {
+         current.classList.remove("is-active");
+      }
+
+      thumbnail.classList.add("is-active");
+      current = thumbnail;
+   }
+});
+
+splide.mount();
