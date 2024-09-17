@@ -334,217 +334,217 @@
          }
       }
    }
-   .char {
-      &-btn-wrapper {
-         overflow-x: scroll;
-      }
-      .conditions {
-         &-block {
-            grid-column: 1 / span 2;
-            @include adaptiveValue("margin-top", 60, 45);
-            p {
-               line-height: 140%;
-               font-weight: 400;
-               @include adaptiveValue("font-size", 14, 12);
-               &:first-of-type {
-                  @include adaptiveValue("margin-bottom", 30, 15);
-               }
-               &:nth-child(n + 2) {
-                  @include adaptiveValue("margin-bottom", 60, 30);
-               }
-            }
-         }
-      }
-      .guarantees {
-         &-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 0.7fr;
-            @media (max-width: 1400px) {
-               grid-template-columns: 1fr;
-               gap: 20px;
-            }
-         }
-         &__desc {
-            margin-bottom: 33px;
-         }
-         &-block {
-            .payment {
-               &-wrapper {
-                  @media (max-width: 1400px) {
-                     gap: 10px;
-                     margin-bottom: 45px;
-                  }
-               }
-               &__title {
-                  margin-bottom: 15px;
-               }
-               &-block {
-                  @include adaptiveValue("width", 375, 290);
-                  &__title {
-                     margin-top: 0;
-                  }
-                  &:nth-child(-n + 2) {
-                     .payment-block__title {
-                        color: $red;
-                     }
-                  }
-               }
-            }
-            @media (max-width: 1400px) {
-               grid-row: 1;
-            }
-         }
-      }
-      .services {
-         &-block {
-            &-wrapper {
-               display: flex;
-               flex-direction: column;
-               gap: 20px;
-            }
-            &-text {
-               display: flex;
-               align-items: start;
-               gap: 10px;
-               span {
-                  color: $red;
-                  line-height: 150%;
-                  font-weight: 500;
-                  @include adaptiveValue("font-size", 18, 14);
-               }
-               p {
-                  color: $grayText;
-                  line-height: 150%;
-                  font-weight: 400;
-                  @include adaptiveValue("font-size", 18, 14);
-               }
-            }
-            .payment {
-               &-block {
-                  &__title {
-                     margin: 0 0 33px;
-                  }
-               }
-            }
-            @media (max-width: 1400px) {
-               grid-row: 2;
-            }
-         }
-      }
-      .delivery {
-         &-info {
-            color: $grayText;
-            line-height: 150%;
+}
+.char {
+   &-btn-wrapper {
+      overflow-x: scroll;
+   }
+   .conditions {
+      &-block {
+         grid-column: 1 / span 2;
+         @include adaptiveValue("margin-top", 60, 45);
+         p {
+            line-height: 140%;
             font-weight: 400;
-            margin-top: 30px;
-            @include adaptiveValue("font-size", 18, 14);
-            p {
-               &:not(:last-child) {
-                  margin-bottom: 20px;
-               }
+            @include adaptiveValue("font-size", 14, 12);
+            &:first-of-type {
+               @include adaptiveValue("margin-bottom", 30, 15);
+            }
+            &:nth-child(n + 2) {
+               @include adaptiveValue("margin-bottom", 60, 30);
             }
          }
       }
-      .payment {
-         &-attention {
-            display: flex;
-            align-items: start;
-            gap: 15px;
-            padding: 20px;
-            background: $bgGray;
-            margin-top: 20px;
-            p {
-               line-height: 150%;
-               font-weight: 500;
-               color: $black;
-               @include adaptiveValue("font-size", 18, 14);
-               span {
-                  color: $red;
+   }
+   .guarantees {
+      &-wrapper {
+         display: grid;
+         grid-template-columns: 1fr 0.7fr;
+         @media (max-width: 1400px) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+         }
+      }
+      &__desc {
+         margin-bottom: 33px;
+      }
+      &-block {
+         .payment {
+            &-wrapper {
+               @media (max-width: 1400px) {
+                  gap: 10px;
+                  margin-bottom: 45px;
                }
             }
-            @media (max-width: $mobileSmall) {
-               flex-direction: column;
+            &__title {
+               margin-bottom: 15px;
+            }
+            &-block {
+               @include adaptiveValue("width", 375, 290);
+               &__title {
+                  margin-top: 0;
+               }
+               &:nth-child(-n + 2) {
+                  .payment-block__title {
+                     color: $red;
+                  }
+               }
             }
          }
-         &-wrapper {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
+         @media (max-width: 1400px) {
+            grid-row: 1;
          }
-         &-block {
+      }
+   }
+   .services {
+      &-block {
+         &-wrapper {
             display: flex;
             flex-direction: column;
-            border: 1px solid $stroke;
-            padding: 30px;
-            @include adaptiveValue("width", 507, 290);
-            &__title {
-               color: $black;
-               font-weight: 500;
-               line-height: 125%;
-               margin-top: 30px;
-               @include adaptiveValue("font-size", 22, 17);
-            }
-            &__desc {
-               color: $grayText;
-               margin-top: 5px;
-               font-weight: 400;
+            gap: 20px;
+         }
+         &-text {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            span {
+               color: $red;
                line-height: 150%;
+               font-weight: 500;
                @include adaptiveValue("font-size", 18, 14);
             }
-            &-img {
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               span {
-                  color: $red;
+            p {
+               color: $grayText;
+               line-height: 150%;
+               font-weight: 400;
+               @include adaptiveValue("font-size", 18, 14);
+            }
+         }
+         .payment {
+            &-block {
+               &__title {
+                  margin: 0 0 33px;
                }
             }
          }
-         &__title {
-            line-height: 125%;
+         @media (max-width: 1400px) {
+            grid-row: 2;
+         }
+      }
+   }
+   .delivery {
+      &-info {
+         color: $grayText;
+         line-height: 150%;
+         font-weight: 400;
+         margin-top: 30px;
+         @include adaptiveValue("font-size", 18, 14);
+         p {
+            &:not(:last-child) {
+               margin-bottom: 20px;
+            }
+         }
+      }
+   }
+   .payment {
+      &-attention {
+         display: flex;
+         align-items: start;
+         gap: 15px;
+         padding: 20px;
+         background: $bgGray;
+         margin-top: 20px;
+         p {
+            line-height: 150%;
             font-weight: 500;
             color: $black;
-            margin-bottom: 30px;
-            @include adaptiveValue("font-size", 32, 19);
+            @include adaptiveValue("font-size", 18, 14);
+            span {
+               color: $red;
+            }
+         }
+         @media (max-width: $mobileSmall) {
+            flex-direction: column;
          }
       }
-      &__navigation {
+      &-wrapper {
          display: flex;
-         @media (max-width: $mobile) {
-            @include adaptiveValue("width", 800, 620);
-         }
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 10px;
       }
-      &__body {
-         &-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            @include adaptiveValue("gap", 60, 30);
-            @media (max-width: $mobile) {
-               grid-template-columns: 1fr;
+      &-block {
+         display: flex;
+         flex-direction: column;
+         border: 1px solid $stroke;
+         padding: 30px;
+         @include adaptiveValue("width", 507, 290);
+         &__title {
+            color: $black;
+            font-weight: 500;
+            line-height: 125%;
+            margin-top: 30px;
+            @include adaptiveValue("font-size", 22, 17);
+         }
+         &__desc {
+            color: $grayText;
+            margin-top: 5px;
+            font-weight: 400;
+            line-height: 150%;
+            @include adaptiveValue("font-size", 18, 14);
+         }
+         &-img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+               color: $red;
             }
          }
       }
       &__title {
-         color: $grayText;
-         padding-bottom: 15px;
-         border-bottom: 1px solid $stroke;
-         width: 100%;
-         font-weight: 500;
          line-height: 125%;
-         @include adaptiveValue("font-size", 22, 17);
-         &._tab-active {
-            color: $black;
-            border-bottom: 1px solid $red;
+         font-weight: 500;
+         color: $black;
+         margin-bottom: 30px;
+         @include adaptiveValue("font-size", 32, 19);
+      }
+   }
+   &__navigation {
+      display: flex;
+      @media (max-width: $mobile) {
+         @include adaptiveValue("width", 800, 620);
+      }
+   }
+   &__body {
+      &-item {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         @include adaptiveValue("gap", 60, 30);
+         @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
          }
       }
-      &__content {
-         color: $grayText;
-         font-weight: 400;
-         line-height: 150%;
-         @include adaptiveValue("margin-top", 40, 30);
-         @include adaptiveValue("font-size", 18, 14);
+   }
+   &__title {
+      color: $grayText;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $stroke;
+      width: 100%;
+      font-weight: 500;
+      line-height: 125%;
+      @include adaptiveValue("font-size", 22, 17);
+      &._tab-active {
+         color: $black;
+         border-bottom: 1px solid $red;
       }
+   }
+   &__content {
+      color: $grayText;
+      font-weight: 400;
+      line-height: 150%;
+      @include adaptiveValue("margin-top", 40, 30);
+      @include adaptiveValue("font-size", 18, 14);
    }
 }
 .splide {

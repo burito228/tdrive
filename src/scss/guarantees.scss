@@ -1,0 +1,34 @@
+.conditions {
+   &-block {
+      color: $grayText;
+   }
+}
+.guarantees {
+   &__desc {
+      color: $grayText;
+      line-height: 140%;
+      font-weight: 400;
+      @include adaptiveValue("font-size", 18, 14);
+   }
+   .char {
+      .guarantees-wrapper {
+         @media (max-width: 1400px) {
+            gap: unset;
+         }
+      }
+      .guarantees-block {
+         .payment {
+            &__title {
+               @include adaptiveValue("font-size", 64, 29);
+               @include adaptiveValue("margin-bottom", 40, 10);
+            }
+            &-wrapper {
+               justify-content: unset;
+               @media (max-width: 1400px) {
+                  justify-content: center;
+               }
+            }
+         }
+      }
+   }
+}

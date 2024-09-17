@@ -58,7 +58,7 @@
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
 		"html-webpack-plugin": "latest",
-		"inputmask": "latest",
+		"inputmask": "^5.0.9",
 		"js-datepicker": "latest",
 		"lightgallery": "latest",
 		"load-plugins": "latest",

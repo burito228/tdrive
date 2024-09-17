@@ -2,6 +2,7 @@
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
+import Inputmask from "inputmask";
 
 document.addEventListener("click", documentActions);
 
@@ -221,3 +222,8 @@ splide.on("mounted move", function () {
 });
 
 splide.mount();
+
+var selector = document.getElementById("contacts-input");
+
+var im = new Inputmask("99-9999999");
+im.mask(selector);

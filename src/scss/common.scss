@@ -38,3 +38,27 @@ select {
       background: $black;
    }
 }
+.contacts-input {
+   color: $black;
+   border: 1px solid $stroke;
+   font-weight: 500;
+   line-height: 140%;
+   transition: all 0.5s ease;
+   padding: 20.5px 15px 5.5px;
+   @include adaptiveValue("font-size", 16, 14);
+
+   &:focus {
+      border-bottom: 1px solid $red;
+      caret-color: $red;
+   }
+
+   &__title {
+      color: $grayText;
+      position: absolute;
+      top: 3px;
+      left: 20px;
+      line-height: 140%;
+      font-weight: 500;
+      @include adaptiveValue("font-size", 14, 12);
+   }
+}
