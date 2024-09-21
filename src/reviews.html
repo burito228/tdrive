@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"ReviewsPage" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="delivery-page">
+               <div class="overlay"></div>
+               <section class="breadcrumbs">
+                  <div class="breadcrumbs__container">
+                     <div class="breadcrumbs-nav">
+                        <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
+                        <a href="reviews.html" class="breadcrumbs-nav__link active">Отзывы</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="reviews">
+                  <div class="reviews__container">
+                     @@include('html/_popup.htm',{})
+                     <h1 class="reviews__title">Отзывы</h1>
+                     <div class="reviews-wrapper">
+                        <div class="reviews-rev">
+                           <div class="reviews-sort">
+                              <div class="reviews-sort-rate">
+                                 <div class="reviews-sort-rate__img">
+                                    <img src="img/icons/small/rate.svg" alt="rate">
+                                    <img src="img/icons/small/rate.svg" alt="rate">
+                                    <img src="img/icons/small/rate.svg" alt="rate">
+                                    <img src="img/icons/small/rate.svg" alt="rate">
+                                    <img src="img/reviews/rate-gray.svg" alt="rate-gray">
+                                 </div>
+                                 <div class="reviews-sort-rate__count reviews-count">
+                                    <div class="reviews-count__block">
+                                       <p><span>4,7</span> из <span>5</span></p>
+                                    </div>
+                                    <div class="reviews-count__block">
+                                       <p><span>15</span> отзывов</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="reviews-sort-item">
+                                 <select name="rate" data-class-modif="form">
+                                    <option value="1" selected>по высшему рейтингу</option>
+                                    <option value="2">по нисшему рейтингу</option>
+                                    <option value="3">по новизне</option>
+                                    <option value="4">по колличеству</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="reviews-list">
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                              <a href="#" class="tesmontials-block">
+                                 <div class="tesmontials-block-img">
+                                    <div class="tesmontials-block-img__hero">
+                                       <img
+                                          src="@img/home/tesmontials/hero1.jpg"
+                                          alt="hero"
+                                       />
+                                    </div>
+                                    <div
+                                       class="tesmontials-block-img__info tesmontials-rating"
+                                    >
+                                       <h4 class="tesmontials-rating__title">
+                                          Владислав Филатов
+                                       </h4>
+                                       <div class="tesmontials-rating__block">
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                          <img
+                                             src="@img/icons/small/rate.svg"
+                                             alt="rate"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tesmontials-block-desc">
+                                    <p class="tesmontials-block-desc__item">
+                                       Сотрудничеством с автосалоном довольный,
+                                       купил здесь Tesla Model S в отличном
+                                       состоянии на выгодных для меня условиях.
+                                       Хочу особо отметить работу менеджеров,
+                                       которые по теме и хорошо помогли с
+                                       покупкой.
+                                    </p>
+                                 </div>
+                                 <div class="tesmontials-block-date">
+                                    <span class="tesmontials-block-date__item"
+                                       >03.06.2024</span
+                                    >
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="pages-nav-wrapper">
+                              <div class="pages-pagination">
+                                 <button type="button" class="pages-pagination__prev" data-da=".pages-pagination,766.98,2"></button>
+                                 <ul class="pages-pagination-nav">
+                                    <li>
+                                       <a href="#" class="pages-pagination-nav__item active">1</a>
+                                    </li>
+                                    <li>
+                                       <a href="#" class="pages-pagination-nav__item">2</a>
+                                    </li>
+                                    <li>
+                                       <a href="#" class="pages-pagination-nav__item">3</a>
+                                    </li>
+                                    <li>
+                                       <a href="#" class="pages-pagination-nav__item">4</a>
+                                    </li>
+                                    <li>
+                                       <input type="text" placeholder="..." class="pages-pagination-nav__item">
+                                    </li>
+                                    <li>
+                                       <a href="#" class="pages-pagination-nav__item">78</a>
+                                    </li>
+                                 </ul>
+                                 <button type="button" class="pages-pagination__next active"></button>
+                              </div>
+                              <div class="pages-more">
+                                 <button type="button">Загрузить еще <span>9</span><img src="@img/icons/small/reapit.svg" alt="reapit"></button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="reviews-form">
+                           <div class="contacts-form">
+                              <h2 class="contacts-form__title">Оставьте отзыв</h2>
+                              <form action="#">
+                                 <div class="contacts-form-wrapper">
+                                    <div class="contacts-form-block ">
+                                       <input id="contacts-name" class="contacts-input ">
+                                       <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                    </div>
+                                    <div class="contacts-form-block form-wrapper">
+                                       <div class="form-wrapper-titling">
+                                          <p class="form-wrapper-titling__desc">Ваша оценка</p>
+                                          <div class="rating rating_set" data-rating="set">
+                                             <div class="rating__body">
+                                                <div class="rating__active"></div>
+                                                <div class="rating__items">
+                                                   <label class="rating__item">
+                                                      <input class="rating__input" type="radio" name="rating">
+                                                   </label>
+                                                   <label class="rating__item">
+                                                      <input class="rating__input" type="radio" name="rating">
+                                                   </label>
+                                                   <label class="rating__item">
+                                                      <input class="rating__input" type="radio" name="rating">
+                                                   </label>
+                                                   <label class="rating__item">
+                                                      <input class="rating__input" type="radio" name="rating">
+                                                   </label>
+                                                   <label class="rating__item">
+                                                      <input class="rating__input" type="radio" name="rating">
+                                                   </label>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="contacts-form-block ">
+                                       <textarea id="contacts-area" class="contacts-input " placeholder="Ваш отзыв"></textarea>
+                                    </div>
+                                 </div>
+                                 <button type="submit" class="contacts-form__btn" data-popup="#popup-reviews">Опубликовать</button>
+                              </form>
+                              <div class="contacts-form-info">
+                                 <p><span>*</span>Нажимая на кнопку, Вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>

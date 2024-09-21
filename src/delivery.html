@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"DeliveryPage" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="delivery-page">
+               <div class="overlay"></div>
+               <section class="breadcrumbs">
+                  <div class="breadcrumbs__container">
+                     <div class="breadcrumbs-nav">
+                        <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
+                        <a href="about.html" class="breadcrumbs-nav__link active">Оплата и Доставка</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="delivery">
+                  <div class="delivery__container">
+                     <div class="char">
+                        <h1 class="payment__title">Оплата и Доставка</h1>
+                        <div class="char__body-payment payment">
+                           <h3 class="payment__title">Вы можете оплатить свой заказ любим удобным способом:</h3>
+                           <div class="payment-wrapper">
+                              <div class="payment-block">
+                                 <div class="payment-block-img">
+                                    <img src="img/icons/big/money.svg" alt="money">
+                                    <span>01</span>
+                                 </div>
+                                 <h4 class="payment-block__title">Наличными при самовывозе</h4>
+                                 <p class="payment-block__desc">для подбора и выдачи автомобилей</p>
+                              </div>
+                              <div class="payment-block">
+                                 <div class="payment-block-img">
+                                    <img src="img/icons/big/money-card.svg" alt="money">
+                                    <span>02</span>
+                                 </div>
+                                 <h4 class="payment-block__title">Переводом на банковскую карту </h4>
+                                 <p class="payment-block__desc">или р/с СПД-ФЛ (100% оплата)</p>
+                              </div>
+                              <div class="payment-block">
+                                 <div class="payment-block-img">
+                                    <img src="img/icons/big/novaya-pochta.svg" alt="mail">
+                                    <span>03</span>
+                                 </div>
+                                 <h4 class="payment-block__title">Отложенным платежом «Новая почта»</h4>
+                                 <p class="payment-block__desc">с условием предварительной оплаты стоимости доставки в оба конца</p>
+                              </div>
+                           </div>
+                           <div class="payment-attention">
+                              <img src="img/icons/small/warning.svg" alt="warning">
+                              <p><span>Внимание!!!</span> Все комиссии банков-посредников, включая как отправителя, так и получателя, являются исключительными расходами покупателя. Если покупатель не желает их оплачивать, то единственный способ избежать данных дополнительных расходов – это оплата наличными продавцу.</p>
+                           </div>
+                        </div>
+                        <div class="char__body-payment payment delivery">
+                           <h3 class="payment__title">Возможны несколько вариантов доставки:</h3>
+                           <div class="payment-wrapper">
+                              <div class="payment-block">
+                                 <div class="payment-block-img">
+                                    <img src="img/icons/big/delovery-human.svg" alt="human">
+                                    <span>01</span>
+                                 </div>
+                                 <h4 class="payment-block__title">Самовывоз</h4>
+                              </div>
+                              <div class="payment-block">
+                                 <div class="payment-block-img">
+                                    <img src="img/icons/big/novaya-pochta.svg" alt="mail">
+                                    <span>02</span>
+                                 </div>
+                                 <h4 class="payment-block__title">Доставка по Украине «Новой почтой»</h4>
+                                 <p class="payment-block__desc">адресная доставка, почтомат или отделение</p>
+                              </div>
+                              <div class="payment-block">
+                                 <div class="payment-block-img">
+                                    <img src="img/icons/big/delivery-world.svg" alt="world">
+                                    <span>03</span>
+                                 </div>
+                                 <h4 class="payment-block__title">Международная адресная доставка</h4>
+                                 <p class="payment-block__desc">«Укрпочтой» или компанией перевозчиком «Деливери» при условии 100% предоплаты</p>
+                              </div>
+                           </div>
+                           <div class="delivery-info">
+                              <p>Срок и стоимость доставки, а также упаковка товара осуществляется в соответствии с тарифами и правилами компании перевозчика.</p>
+                              <p>Выбирайте удобный вариант и оформляйте заказ!</p>
+                           </div>
+                           <div class="payment-attention">
+                              <img src="img/icons/small/warning.svg" alt="warning">
+                              <p><span>Внимание!!!</span> В страны, являющиеся агрессорами и оккупантами, никаких продаж и отправлений не будет!</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>

@@ -1,0 +1,108 @@
+.reviews {
+   @include adaptiveValue("padding-bottom", 130, 60);
+   &-sort {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      gap: 20px;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         align-items: unset;
+      }
+      &-item {
+         @include adaptiveValue("width", 320, 290);
+         .select {
+            &__title {
+               &::before {
+                  content: "Сортировка";
+                  color: #8e8d91;
+                  position: absolute;
+                  top: 50%;
+                  left: -25px;
+                  transform: translate(50%, -50%);
+               }
+            }
+            &__body {
+               color: $black;
+               line-height: 140%;
+               font-weight: 500;
+               @include adaptiveValue("font-size", 16, 14);
+            }
+            &__value {
+               padding: 15px 15px 15px 110px;
+            }
+         }
+      }
+      &-rate {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+   }
+   &-count {
+      color: $black;
+      font-weight: 500;
+      line-height: 140%;
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("font-size", 16, 14);
+      &__block {
+         &:not(:last-of-type) {
+            margin-right: 10px;
+         }
+         &:last-of-type {
+            color: $grayText;
+            padding-left: 10px;
+            border-left: 2px solid $stroke;
+         }
+      }
+   }
+   &-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+      @include adaptiveValue("row-gap", 40, 20);
+      @media (max-width: $mobileSmall) {
+         grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      }
+   }
+   &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 0.32fr;
+      gap: 20px;
+      @media (max-width: 1400px) {
+         grid-template-columns: 1fr 0.5fr;
+      }
+      @media (max-width: $tablet) {
+         grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns: 1fr;
+         gap: 60px;
+      }
+   }
+   &-form {
+      .contacts-form {
+         background: $mainColor;
+         border: 1px solid $stroke;
+         &-block {
+            width: 100%;
+         }
+      }
+   }
+   .form-wrapper {
+      padding: 20px 15px;
+      border: 1px solid $stroke;
+      &-titling {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         &__desc {
+            font-weight: 500;
+            line-height: 140%;
+            color: $black;
+            @include adaptiveValue("font-size", 14, 12);
+         }
+      }
+   }
+}

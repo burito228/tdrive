@@ -1,0 +1,217 @@
+.booking {
+   @include adaptiveValue("padding-bottom", 130, 60);
+   &-wrapper {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid $stroke;
+      @include adaptiveValue("padding", 50, 30);
+      @include adaptiveValue("gap", 50, 30);
+   }
+   &-block {
+      &:not(:last-of-type) {
+         border-bottom: 1px solid $stroke;
+         @include adaptiveValue("padding-bottom", 50, 30);
+      }
+      &__title {
+         color: $black;
+         font-weight: 500;
+         line-height: 125%;
+         margin-bottom: 25px;
+         @include adaptiveValue("font-size", 32, 19);
+      }
+      &-subwrap {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+         gap: 10px;
+         &__item {
+            position: relative;
+         }
+         .booking-delivery {
+            &-block {
+               border: 1px solid $stroke;
+               transition: all 0.5s ease;
+               @include adaptiveValue("padding", 24, 20);
+               &.active {
+                  background: $bgGray;
+                  .booking-delivery-block__img_np {
+                     background: url("@img/icons/big/novaya-pochta.svg")
+                        no-repeat;
+                  }
+                  .booking-delivery-block__img_mc {
+                     background: url("@img/icons/big/money-card.svg") no-repeat;
+                  }
+                  .booking-delivery-block__img_dm {
+                     background: url("@img/icons/big/delivery-map.svg")
+                        no-repeat;
+                  }
+                  .booking-delivery-block__img_dh {
+                     background: url("@img/icons/big/delovery-human.svg")
+                        no-repeat;
+                  }
+                  .booking-delivery-block__img_mn {
+                     background: url("@img/icons/big/money.svg") no-repeat;
+                  }
+                  .booking-delivery-block__img::after {
+                     content: "";
+                     display: block;
+                     background: url("@img/contacts/check.svg") no-repeat;
+                     width: 14px;
+                     height: 14px;
+                  }
+               }
+               &:hover {
+                  background: $bgGray;
+                  .booking-delivery-block__img_np {
+                     background: url("@img/icons/big/novaya-pochta.svg")
+                        no-repeat;
+                  }
+                  .booking-delivery-block__img_dm {
+                     background: url("@img/icons/big/delivery-map.svg")
+                        no-repeat;
+                  }
+                  .booking-delivery-block__img_dh {
+                     background: url("@img/icons/big/delovery-human.svg")
+                        no-repeat;
+                  }
+                  .booking-delivery-block__img_mn {
+                     background: url("@img/icons/big/money.svg") no-repeat;
+                  }
+                  .booking-delivery-block__img_mc {
+                     background: url("@img/icons/big/money-card.svg") no-repeat;
+                  }
+               }
+               &__img {
+                  margin-bottom: 25px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  span {
+                     display: block;
+                     width: 30px;
+                     height: 30px;
+                     transition: all 0.5s ease;
+                  }
+                  &_np {
+                     background: url("@img/booking/np-gray.svg") no-repeat;
+                  }
+                  &_dm {
+                     background: url("@img/booking/dm-gray.svg") no-repeat;
+                  }
+                  &_dh {
+                     background: url("@img/booking/dh-gray.svg") no-repeat;
+                  }
+                  &_mn {
+                     background: url("@img/booking/mn-gray.svg") no-repeat;
+                  }
+                  &_mс {
+                     background: url("@img/icons/big/money-card.svg") no-repeat;
+                  }
+               }
+               &__desc {
+                  color: $black;
+                  font-weight: 500;
+                  line-height: 150%;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  @include adaptiveValue("font-size", 18, 14);
+               }
+               p {
+                  color: $red;
+               }
+            }
+         }
+         &.booking-adress {
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            @media (max-width: 1199px) {
+               grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+         }
+         .booking-adress {
+            &-block {
+               grid-row: 2;
+               width: 100%;
+               @media (max-width: 1199px) {
+                  grid-row: unset;
+               }
+               &:first-of-type {
+                  grid-row: 1;
+                  grid-column: 1 / span 4;
+                  @media (max-width: 1199px) {
+                     grid-row: unset;
+                     grid-column: unset;
+                  }
+               }
+               .select {
+                  &__title {
+                     color: $black;
+                  }
+                  &__value {
+                     padding: 16px 20px;
+                     &::before {
+                        content: "";
+                        display: block;
+                        background: url("@img/icons/big/novaya-pochta.svg")
+                           no-repeat center center;
+                        width: 30px;
+                        height: 30px;
+                        transform: scale(0.65);
+                     }
+                  }
+               }
+               .search-input {
+                  padding: 20px 17.5px;
+                  width: 100%;
+                  height: unset;
+                  color: $black;
+                  font-weight: 500;
+                  line-height: 140%;
+                  @include adaptiveValue("font-size", 16, 14);
+                  &:focus {
+                     caret-color: unset;
+                     background: unset;
+                     background-position: unset;
+                  }
+                  &::placeholder {
+                     color: $black;
+                     font-weight: 500;
+                     line-height: 140%;
+                     @include adaptiveValue("font-size", 16, 14);
+                  }
+               }
+            }
+         }
+         &.booking-payment {
+            .booking-delivery-block {
+               display: flex;
+               flex-direction: column;
+               &__img {
+                  width: 100%;
+               }
+               &__desc {
+                  width: 100%;
+                  &:last-of-type {
+                     margin-top: 10px;
+                     flex-wrap: wrap;
+                     gap: 10px;
+                     text-align: left;
+                     p {
+                        &:last-of-type {
+                           color: $black;
+                           @include adaptiveValue("font-size", 16, 12);
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   .cart {
+      &-order {
+         .contacts-input {
+            padding: 20px;
+         }
+      }
+   }
+}

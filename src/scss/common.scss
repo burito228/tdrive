@@ -6,6 +6,13 @@ select {
    outline: none;
    cursor: pointer;
 }
+h1 {
+   color: $black;
+   line-height: 110%;
+   font-weight: 500;
+   @include adaptiveValue("font-size", 64, 29);
+   @include adaptiveValue("margin-bottom", 40, 30);
+}
 .search-input {
    padding: 18px 15px 18px 45px;
    border: 1px solid $stroke;
@@ -60,5 +67,112 @@ select {
       line-height: 140%;
       font-weight: 500;
       @include adaptiveValue("font-size", 14, 12);
+   }
+}
+.pages-nav-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 35px;
+   font-weight: 500;
+   line-height: 140%;
+   @include adaptiveValue("font-size", 16, 14);
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 30px;
+      align-items: unset;
+   }
+   .pages-pagination {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      &-nav {
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         &__item {
+            padding: 6.5px 12px;
+            &.active {
+               border: 1px solid $red;
+               color: $red;
+            }
+         }
+         li {
+            color: #8e8d91;
+            input {
+               color: $black;
+               text-align: center;
+               width: 20px;
+               padding: 0;
+            }
+         }
+      }
+      &__prev {
+         transform: rotate(180deg);
+         &.active {
+            background: url("@img/header/icon/red-arrow.svg") no-repeat;
+            background-position: 50%;
+            transform: scale(2);
+         }
+      }
+      &__next {
+         &.active {
+            background: url("@img/header/icon/red-arrow.svg") no-repeat;
+            background-position: 50%;
+            transform: rotate(180deg) scale(2);
+         }
+      }
+      &__prev,
+      &__next {
+         background: url("@img/header/icon/gray-arrow.svg") no-repeat;
+         background-position: 50%;
+         width: 17px;
+         height: 35px;
+      }
+   }
+   .pages-more {
+      color: $black;
+      @media (max-width: $mobile) {
+         width: 100%;
+      }
+      button {
+         border: 1px solid $stroke;
+         padding: 14px 30px;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         @media (max-width: $mobile) {
+            width: 100%;
+            justify-content: center;
+         }
+      }
+   }
+}
+#popup-contact,
+#popup-reviews {
+   .popup__wrapper {
+      align-items: center;
+   }
+   .popup__content {
+      text-align: center;
+      padding: 116px 40px 0;
+      @include adaptiveValue("width", 507, 290);
+      @media (max-width: $mobile) {
+         order: 1;
+         padding: 116px 25px 0;
+      }
+      h4 {
+         color: $red;
+         font-weight: 500;
+         line-height: 110%;
+         margin-bottom: 10px;
+         @include adaptiveValue("font-size", 48, 27);
+      }
+      p {
+         color: $black;
+         font-weight: 500;
+         line-height: 125%;
+         @include adaptiveValue("font-size", 22, 17);
+      }
    }
 }

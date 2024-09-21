@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"BookingPage" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="booking-page">
+               <div class="overlay"></div>
+               <section class="breadcrumbs">
+                  <div class="breadcrumbs__container">
+                     <div class="breadcrumbs-nav">
+                        <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
+                        <a href="cart.html" class="breadcrumbs-nav__link">Корзина</a>
+                        <a href="order.html" class="breadcrumbs-nav__link active">Оформление заказа</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="booking">
+                  <div class="booking__container">
+                     <h1 class="cart__title">Оформление заказа</h1>
+                     <form action="#" class="cart__wrapper" id="frm2">
+                        <div class="booking-wrapper">
+                           <div class="booking-block">
+                              <h2 class="booking-block__title">Покупатель</h2>
+                              <div class="booking-block-subwrap">
+                                 <div class="booking-block-subwrap__item">
+                                    <input id="contacts-name" class="contacts-input ">
+                                    <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                 </div>
+                                 <div class="booking-block-subwrap__item">
+                                    <input id="contacts-name" class="contacts-input ">
+                                    <label class="contacts-input__title" for="contacts-name">Фамилия</label>
+                                 </div>
+                                 <div class="booking-block-subwrap__item">
+                                    <input id="contacts-num" data-inputmask="'mask': '+38 (999) 999 99 99' " class="contacts-input " inputmode="text">
+                                    <label class="contacts-input__title" for="contacts-num">Номер телефона</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="booking-block">
+                              <h2 class="booking-block__title">Способ доставки</h2>
+                              <div class="booking-block-subwrap booking-delivery">
+                                 <button type="button" class="booking-delivery-block active">
+                                    <div class="booking-delivery-block__img">
+                                       <span class="booking-delivery-block__img_np"></span>
+                                    </div>
+                                    <div class="booking-delivery-block__desc">
+                                       <h4>Новой почтой</h4>
+                                       <p><span>2.40</span> $</p>
+                                    </div>
+                                 </button>
+                                 <button type="button" class="booking-delivery-block">
+                                    <div class="booking-delivery-block__img">
+                                       <span class="booking-delivery-block__img_dm"></span>
+                                    </div>
+                                    <div class="booking-delivery-block__desc">
+                                       <h4>Адресная доставка НП</h4>
+                                       <p><span>2.90</span> $</p>
+                                    </div>
+                                 </button>
+                                 <button type="button" class="booking-delivery-block">
+                                    <div class="booking-delivery-block__img">
+                                       <span class="booking-delivery-block__img_dh"></span>
+                                    </div>
+                                    <div class="booking-delivery-block__desc">
+                                       <h4>Самовывоз</h4>
+                                       <p><span>0</span> $</p>
+                                    </div>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="booking-block">
+                              <h2 class="booking-block__title">Адрес доставки</h2>
+                              <div class="booking-block-subwrap booking-adress">
+                                 <div class="booking-adress-block">
+                                    <select name="form[frm2]" data-class-modif="form">
+                                       <option value="1" selected>Выберете отделение</option>
+                                       <option value="2">1</option>
+                                       <option value="3">2</option>
+                                       <option value="4">3</option>
+                                    </select>
+                                 </div>
+                                 <div class="booking-adress-block">
+                                    <input autocomplete="off" type="text" name="form[frm2]" data-error="Помилка" placeholder="Страна" class="search-input">
+                                 </div>
+                                 <div class="booking-adress-block">
+                                    <input autocomplete="off" type="text" name="form[frm2]" data-error="Помилка" placeholder="Город" class="search-input">
+                                 </div>
+                                 <div class="booking-adress-block">
+                                    <input autocomplete="off" type="text" name="form[frm2]" data-error="Помилка" placeholder="Адрес/номер отделения" class="search-input">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="booking-block">
+                              <h2 class="booking-block__title">Способ оплаты</h2>
+                              <div class="booking-block-subwrap booking-delivery booking-payment">
+                                 <button type="button" class="booking-delivery-block active">
+                                    <div class="booking-delivery-block__img">
+                                       <span class="booking-delivery-block__img_mc"></span>
+                                    </div>
+                                    <div class="booking-delivery-block__desc">
+                                       <h4>Банковский перевод</h4>
+                                    </div>
+                                    <div class="booking-delivery-block__desc">
+                                       <p><span>4149 6293 6469 7623</span></p>
+                                       <p>ФОП <span>Филатов Алексей Александрович</span></p>
+                                    </div>
+                                 </button>
+                                 <button type="button" class="booking-delivery-block">
+                                    <div class="booking-delivery-block__img">
+                                       <span class="booking-delivery-block__img_mn"></span>
+                                    </div>
+                                    <div class="booking-delivery-block__desc">
+                                       <h4>Оплата при доставке</h4>
+                                    </div>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cart-order">
+                           <div class="cart-order-heading">
+                              <h4 class="cart-order-heading__title">Ваш заказ</h4>
+                              <p class="cart-order-heading__count">x<span>2</span> товара</p>
+                           </div>
+                           <div class="settings-link__btn">
+                              <button type="button" class="filter__btn active">
+                                 $
+                              </button>
+                              <button type="button" class="filter__btn">
+                                 ₴
+                              </button>
+                           </div>
+                           <div class="cart-order-subtotal">
+                              <div class="cart-order-subtotal__block">
+                                 <h5>Товары</h5>
+                                 <p><span>720.00</span> $</p>
+                              </div>
+                              <div class="cart-order-subtotal__block">
+                                 <h5>Скидка</h5>
+                                 <p><span>-91.00</span> $</p>
+                              </div>
+                           </div>
+                           <div class="cart-order-total">
+                              <div class="cart-order-total__block">
+                                 <p>Итого</p>
+                                 <h4 class="cart-order-heading__title"><span>720.00</span> $</h4>
+                              </div>
+                              <div class="cart-order-total__desc">
+                                 <p>*Без учета стоимости доставки</p>
+                              </div>
+                           </div>
+                           <div class="contacts-form-block">
+										<textarea id="contacts-area" class="contacts-input" placeholder="Комментарии к заказу"></textarea>
+									</div>
+                           <div class="booking-order__btn">
+                              <button type="submit" class="contacts-form__btn">Перейти к оформлению</button>
+                              <div class="contacts-form-info">
+                                 <p><span>*</span>Нажимая на кнопку, Вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>

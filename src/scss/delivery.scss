@@ -1,0 +1,12 @@
+.delivery {
+   @include adaptiveValue("padding-bottom", 130, 60);
+   .char {
+      .delivery {
+         @include adaptiveValue("margin-top", 60, 30);
+      }
+   }
+   h1.payment__title {
+      @include adaptiveValue("font-size", 64, 29);
+      @include adaptiveValue("margin-bottom", 60, 45);
+   }
+}

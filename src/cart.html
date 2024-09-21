@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"CartPage" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="cart-page">
+               <div class="overlay"></div>
+               <section class="breadcrumbs">
+                  <div class="breadcrumbs__container">
+                     <div class="breadcrumbs-nav">
+                        <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
+                        <a href="cart.html" class="breadcrumbs-nav__link active">Корзина</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="cart">
+                  <div class="cart__container">
+                     <h1 class="cart__title">Корзина</h1>
+                     <form action="#" class="cart__wrapper" id="frm1">
+                        <div class="cart-products">
+                           <div class="cart-sort">
+                              <div class="cart-sort-check">
+                                 <div class="checkbox">
+                                    <input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]" onclick='checkedAll(frm1)'>
+                                    <label for="c_1" class="checkbox__label"><span class="checkbox__text">Выбрать все</span></label>
+                                 </div>
+                              </div>
+                              <div class="cart-sort-delete">
+                                 <a href="#">Удалить выбранное</a>
+                              </div>
+                           </div>
+                           <div class="cart-products-wrapper">
+                              <div class="cart-product">
+                                 <div class="checkbox">
+                                    <input id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+                                 </div>
+                                 <div class="cart-product-wrap">
+                                    <div class="cart-product-wrap__img">
+                                       <img src="@img/cart/product1.png" alt="product">
+                                    </div>
+                                    <div class="cart-product-wrap__desc">
+                                          <a href="#">Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</a>
+                                          <p>Артикул <a href="#">X 1027361-00-G</a></p>
+                                    </div>
+                                 </div>
+                                 <div class="cart-price">
+                                    <p class="cart-price__new"><span>400.00</span> $</p>
+                                    <p class="cart-price__old"><span>430.50</span> $</p>
+                                 </div>
+                                 <div data-quantity="" class="quantity">
+                                    <button data-quantity-minus="" type="button" class="quantity__button quantity__button_minus"></button>
+                                    <div class="quantity__input">
+                                       <input data-quantity-value="" autocomplete="off" type="text" name="form[]" value="1">
+                                    </div>
+                                    <button data-quantity-plus="" type="button" class="quantity__button quantity__button_plus"></button>
+                                 </div>
+                              </div>
+                              <div class="cart-product">
+                                 <div class="checkbox">
+                                    <input id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+                                 </div>
+                                 <div class="cart-product-wrap">
+                                    <div class="cart-product-wrap__img">
+                                       <img src="@img/cart/product1.png" alt="product">
+                                    </div>
+                                    <div class="cart-product-wrap__desc">
+                                          <a href="#">Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</a>
+                                          <p>Артикул <a href="#">X 1027361-00-G</a></p>
+                                    </div>
+                                 </div>
+                                 <div class="cart-price">
+                                    <p class="cart-price__new"><span>400.00</span> $</p>
+                                    <p class="cart-price__old"><span>430.50</span> $</p>
+                                 </div>
+                                 <div data-quantity="" class="quantity">
+                                    <button data-quantity-minus="" type="button" class="quantity__button quantity__button_minus"></button>
+                                    <div class="quantity__input">
+                                       <input data-quantity-value="" autocomplete="off" type="text" name="form[]" value="1">
+                                    </div>
+                                    <button data-quantity-plus="" type="button" class="quantity__button quantity__button_plus"></button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cart-order">
+                           <div class="cart-order-heading">
+                              <h4 class="cart-order-heading__title">Ваш заказ</h4>
+                              <p class="cart-order-heading__count">x<span>2</span> товара</p>
+                           </div>
+                           <div class="settings-link__btn">
+                              <button type="button" class="filter__btn active">
+                                 $
+                              </button>
+                              <button type="button" class="filter__btn">
+                                 ₴
+                              </button>
+                           </div>
+                           <div class="cart-order-subtotal">
+                              <div class="cart-order-subtotal__block">
+                                 <h5>Товары</h5>
+                                 <p><span>720.00</span> $</p>
+                              </div>
+                              <div class="cart-order-subtotal__block">
+                                 <h5>Скидка</h5>
+                                 <p><span>-91.00</span> $</p>
+                              </div>
+                           </div>
+                           <div class="cart-order-total">
+                              <div class="cart-order-total__block">
+                                 <p>Итого</p>
+                                 <h4 class="cart-order-heading__title"><span>720.00</span> $</h4>
+                              </div>
+                              <div class="cart-order-total__desc">
+                                 <p>*Без учета стоимости доставки</p>
+                              </div>
+                           </div>
+                           <a href="order.html" class="contacts-form__btn">Перейти к оформлению</a>
+                        </div>
+                     </form>
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>

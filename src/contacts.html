@@ -68,7 +68,7 @@
                                     <textarea id="contacts-area" class="contacts-input " placeholder="Ваш вопрос/сообщение"></textarea>
                                  </div>
                               </div>
-                              <button type="submit" class="contacts-form__btn">Отправить</button>
+                              <button type="submit" class="contacts-form__btn" data-popup="#popup-contact">Отправить</button>
                            </form>
                            <div class="contacts-form-info">
                               <p><span>*</span>Нажимая на кнопку, Вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
@@ -78,12 +78,12 @@
                            <iframe class="contacts-map-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.4568948578949!2d30.501479763042973!3d50.42568401751269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cee09fd4745b%3A0x1884dd75ca3456ba!2z0YPQuy4g0J_RgNC-0YLQsNGB0L7QsiDQr9GALCAxMywg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1726513525572!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                            <div class="contacts-map-icon">
                               <a href="https://maps.app.goo.gl/AzkM2SdcPYm13ARy8">
-
                                  <img src="@img/contacts/map-icon.svg" alt="map-icon">
                               </a>
                            </div>
                         </div>
                      </div>
+                     @@include('html/_popup.htm',{})
                   </div>
                </section>
             </div>
