@@ -1,0 +1,139 @@
+.account {
+   @include adaptiveValue("padding-bottom", 130, 60);
+   &-tabs {
+      &__navigation {
+         display: flex;
+      }
+      &__content {
+         @include adaptiveValue("margin-top", 40, 20);
+      }
+   }
+   &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      @media (max-width: $mobile) {
+         grid-template-columns: 1fr;
+      }
+   }
+   &-contacts,
+   &-adress {
+      border: 1px solid $stroke;
+      @include adaptiveValue("padding", 40, 25);
+      &__title {
+         color: $black;
+         font-weight: 500;
+         margin-bottom: 20px;
+         line-height: 125%;
+         @include adaptiveValue("font-size", 32, 19);
+      }
+      &-wrap {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+         gap: 10px;
+      }
+      &-subwrap {
+         position: relative;
+      }
+   }
+   &-adress {
+      &-main {
+         &__wrapper {
+            &:not(:last-of-type) {
+               padding-bottom: 20px;
+               border-bottom: 1px solid $stroke;
+            }
+            &:nth-child(n + 2) {
+               margin-top: 20px;
+            }
+         }
+      }
+      &-functions {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 25px;
+         font-weight: 500;
+         line-height: 140%;
+         color: $black;
+         @include adaptiveValue("font-size", 16, 12);
+         &__add {
+            button {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+            }
+         }
+         img {
+            @media (max-width: $tablet) {
+               transform: scale(0.8);
+            }
+         }
+      }
+      &-col {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+      &-delete {
+         button {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            @media (min-width: $tablet) {
+               span {
+                  display: none;
+               }
+            }
+         }
+      }
+      &-wrap {
+         flex-grow: 1;
+      }
+      &-subwrap {
+         &:last-of-type {
+            grid-column: 1 / span 2;
+            @media (max-width: 1199px) {
+               grid-column: unset;
+            }
+         }
+      }
+      &-check {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-top: 30px;
+         font-weight: 500;
+         line-height: 140%;
+         @include adaptiveValue("font-size", 16, 14);
+         &__btn {
+            padding: 12px 30px;
+            border: 1px solid $stroke;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: $black;
+            &::before {
+               content: "";
+               background: url("@img/account/check.svg") no-repeat;
+               width: 20px;
+               height: 20px;
+            }
+            &:disabled {
+               color: $grayText;
+               pointer-events: none;
+               &::before {
+                  content: "";
+                  background: url("@img/account/check-gray.svg") no-repeat;
+                  width: 20px;
+                  height: 20px;
+               }
+            }
+         }
+         &__cancel {
+            color: $red;
+            border-bottom: 1px solid $red;
+         }
+      }
+   }
+}

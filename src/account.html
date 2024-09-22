@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"AccountPage" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="account-page">
+               <div class="overlay"></div>
+               <section class="breadcrumbs">
+                  <div class="breadcrumbs__container">
+                     <div class="breadcrumbs-nav">
+                        <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
+                        <a href="account.html" class="breadcrumbs-nav__link active">Личный кабинет</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="account">
+                  <div class="account__container">
+                     <h1 class="account__title">
+                        Личный кабинет
+                     </h1>
+                     <div data-tabs class="account-tabs">
+                        <nav data-tabs-titles class="account-tabs__navigation">
+                           <button type="button" class="account-tabs__title char__title _tab-active">Мои данные</button>
+                           <button type="button" class="account-tabs__title char__title">История заказов</button>
+                        </nav>
+                        <div data-tabs-body class="account-tabs__content">
+                           <div class="account-tabs__body">
+                              <div class="account-wrapper">
+                                 <div class="account-contacts">
+                                    <h2 class="account-contacts__title">Контактная информация</h2>
+                                    <div class="account-contacts-wrap">
+                                       <div class="account-contacts-subwrap">
+                                          <input id="contacts-name" class="contacts-input ">
+                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                       </div>
+                                       <div class="account-contacts-subwrap">
+                                          <input id="contacts-name" class="contacts-input ">
+                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                       </div>
+                                       <div class="account-contacts-subwrap">
+                                          <input id="contacts-name" class="contacts-input ">
+                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                       </div>
+                                       <div class="account-contacts-subwrap">
+                                          <input id="contacts-name" class="contacts-input ">
+                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="account-adress">
+                                    <h2 class="account-adress__title">Мои адреса</h2>
+                                    <div class="account-adress-main">
+                                       <div class="account-adress-main__wrapper">
+                                          <div class="account-adress-col">
+                                             <div class="account-adress-wrap">
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input ">
+                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input ">
+                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input ">
+                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input ">
+                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input ">
+                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                </div>
+                                             </div>
+                                             <div class="account-adress-delete" data-da=".account-adress-functions,991.98,2">
+                                                <button type="button"><img src="@img/icons/medium/bin.svg" alt="bin"><span>Удалить</span></button>
+                                             </div>
+                                          </div>
+                                          <div class="account-adress-functions">
+                                             <div class="account-adress-functions__add">
+                                                <button type="button"><img src="@img/icons/small/plus.svg" alt="plus">Добавить адрес</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="account-adress-check">
+                                          <button type="button" class="account-adress-check__btn" disabled>Сохранить изменения</button>
+                                          <button type="button" class="account-adress-check__cancel">Отмена</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="account-tabs__body">
+                              Вміст другого таба
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>
