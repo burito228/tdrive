@@ -36,15 +36,44 @@
          position: relative;
       }
    }
+   &-contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
    &-adress {
       &-main {
          &__wrapper {
+            &:nth-child(n + 2) {
+               margin-top: 20px;
+            }
             &:not(:last-of-type) {
                padding-bottom: 20px;
                border-bottom: 1px solid $stroke;
             }
-            &:nth-child(n + 2) {
-               margin-top: 20px;
+         }
+      }
+
+      &-col {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+         @media (max-width: $tablet) {
+            gap: unset;
+         }
+      }
+      &-delete {
+         button {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            @media (min-width: $tablet) {
+               span {
+                  display: none;
+               }
+            }
+            @media (max-width: $tablet) {
+               display: none;
             }
          }
       }
@@ -64,26 +93,19 @@
                gap: 10px;
             }
          }
+         .account-adress-delete {
+            @media (min-width: $tablet) {
+               display: none;
+            }
+            @media (max-width: $tablet) {
+               button {
+                  display: flex;
+               }
+            }
+         }
          img {
             @media (max-width: $tablet) {
                transform: scale(0.8);
-            }
-         }
-      }
-      &-col {
-         display: flex;
-         align-items: center;
-         gap: 20px;
-      }
-      &-delete {
-         button {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            @media (min-width: $tablet) {
-               span {
-                  display: none;
-               }
             }
          }
       }
@@ -96,16 +118,27 @@
             @media (max-width: 1199px) {
                grid-column: unset;
             }
+            @media (max-width: $mobile) {
+               grid-column: 1 / span 2;
+            }
+            @media (max-width: $mobileSmall) {
+               grid-column: unset;
+            }
          }
       }
       &-check {
          display: flex;
+         gap: 15px;
          align-items: center;
+         flex-wrap: wrap;
          justify-content: space-between;
          margin-top: 30px;
          font-weight: 500;
          line-height: 140%;
          @include adaptiveValue("font-size", 16, 14);
+         @media (max-width: $mobileSmall) {
+            justify-content: center;
+         }
          &__btn {
             padding: 12px 30px;
             border: 1px solid $stroke;
@@ -133,6 +166,138 @@
          &__cancel {
             color: $red;
             border-bottom: 1px solid $red;
+         }
+      }
+   }
+   &-login {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 35px;
+      &__link {
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         color: $black;
+         font-weight: 500;
+         line-height: 140%;
+         @include adaptiveValue("font-size", 16, 12);
+         img {
+            @media (max-width: $tablet) {
+               transform: scale(0.8);
+            }
+         }
+      }
+   }
+   &-history {
+      display: flex;
+      flex-direction: column;
+      @include adaptiveValue("gap", 40, 20);
+      &-block {
+         border: 1px solid $stroke;
+         .history-heading {
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            column-gap: 25px;
+            color: $black;
+            font-weight: 500;
+            line-height: 150%;
+            border-bottom: 1px solid $stroke;
+            padding: 20px;
+            @include adaptiveValue("font-size", 18, 14);
+            @media (max-width: $mobileSmall) {
+               grid-template-columns: repeat(2, 1fr);
+            }
+            &__number {
+               @media (max-width: $mobileSmall) {
+                  order: 1;
+               }
+            }
+            &__price {
+               @media (max-width: $mobileSmall) {
+                  order: 4;
+               }
+            }
+            &__date {
+               @media (max-width: $mobileSmall) {
+                  order: 3;
+               }
+            }
+            &__status {
+               @media (max-width: $mobileSmall) {
+                  order: 2;
+               }
+               &_work {
+                  color: $red;
+               }
+               &_await {
+                  color: #f99258;
+               }
+               &_completed {
+                  color: #5aa041;
+               }
+               &_canceled {
+                  color: $stroke;
+                  text-decoration: line-through;
+               }
+            }
+         }
+         .history-products {
+            &__product {
+               padding: 20px;
+               display: flex;
+               justify-content: space-between;
+               flex-wrap: wrap;
+               row-gap: 20px;
+               @include adaptiveValue("column-gap", 60, 0);
+            }
+            &-wrapper {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(115px, 240px));
+               gap: 15px;
+               flex-grow: 1;
+               @media (max-width: $mobile) {
+                  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+               }
+               .history-block {
+                  font-weight: 500;
+                  line-height: 140%;
+                  color: $black;
+                  @include adaptiveValue("width", 240, 115);
+
+                  &-img {
+                     img {
+                        @include adaptiveValue("width", 110, 45);
+                        @include adaptiveValue("height", 110, 45);
+                     }
+                  }
+                  &-desc {
+                     margin: 20px 0 10px;
+                     @include adaptiveValue("font-size", 16, 12);
+                  }
+                  &-price {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: flex-end;
+                     &__item {
+                        color: $red;
+                        @include adaptiveValue("font-size", 18, 14);
+                     }
+                     &__count {
+                        color: $grayText;
+                        @include adaptiveValue("font-size", 14, 12);
+                     }
+                  }
+               }
+            }
+            &-delivery {
+               .booking-delivery-block {
+                  @include adaptiveValue("width", 375, 250);
+               }
+            }
          }
       }
    }

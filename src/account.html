@@ -28,24 +28,31 @@
                            <div class="account-tabs__body">
                               <div class="account-wrapper">
                                  <div class="account-contacts">
-                                    <h2 class="account-contacts__title">Контактная информация</h2>
-                                    <div class="account-contacts-wrap">
-                                       <div class="account-contacts-subwrap">
-                                          <input id="contacts-name" class="contacts-input ">
-                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                    <div class="account-contacts-wrapper">
+                                       <h2 class="account-contacts__title">Контактная информация</h2>
+                                       <div class="account-contacts-wrap">
+                                          <div class="account-contacts-subwrap">
+                                             <input id="contacts-name" class="contacts-input " placeholder="Ваше имя">
+                                             <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                          </div>
+                                          <div class="account-contacts-subwrap">
+                                             <input id="contacts-name" class="contacts-input " placeholder="Фамилия">
+                                             <label class="contacts-input__title" for="contacts-name">Фамилия</label>
+                                          </div>
+                                          <div class="account-contacts-subwrap">
+                                             <input id="contacts-name" class="contacts-input " placeholder="Email">
+                                             <label class="contacts-input__title" for="contacts-name">Email</label>
+                                          </div>
+                                          <div class="account-contacts-subwrap">
+                                             <input id="contacts-num" data-inputmask="'mask': '+38 (999) 999 99 99' " class="contacts-input " inputmode="text" placeholder="Номер телефона">
+                                             <label class="contacts-input__title" for="contacts-name">Номер телефона</label>
+                                          </div>
                                        </div>
-                                       <div class="account-contacts-subwrap">
-                                          <input id="contacts-name" class="contacts-input ">
-                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
-                                       </div>
-                                       <div class="account-contacts-subwrap">
-                                          <input id="contacts-name" class="contacts-input ">
-                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
-                                       </div>
-                                       <div class="account-contacts-subwrap">
-                                          <input id="contacts-name" class="contacts-input ">
-                                          <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
-                                       </div>
+
+                                    </div>
+                                    <div class="account-adress-check">
+                                       <button type="button" class="account-adress-check__btn" disabled>Сохранить изменения</button>
+                                       <button type="button" class="account-adress-check__cancel">Отмена</button>
                                     </div>
                                  </div>
                                  <div class="account-adress">
@@ -55,33 +62,73 @@
                                           <div class="account-adress-col">
                                              <div class="account-adress-wrap">
                                                 <div class="account-adress-subwrap">
-                                                   <input id="contacts-name" class="contacts-input ">
-                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Страна">
+                                                   <label class="contacts-input__title" for="contacts-name">Страна</label>
                                                 </div>
                                                 <div class="account-adress-subwrap">
-                                                   <input id="contacts-name" class="contacts-input ">
-                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Регион">
+                                                   <label class="contacts-input__title" for="contacts-name">Регион</label>
                                                 </div>
                                                 <div class="account-adress-subwrap">
-                                                   <input id="contacts-name" class="contacts-input ">
-                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Город">
+                                                   <label class="contacts-input__title" for="contacts-name">Город</label>
                                                 </div>
                                                 <div class="account-adress-subwrap">
-                                                   <input id="contacts-name" class="contacts-input ">
-                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Индекс">
+                                                   <label class="contacts-input__title" for="contacts-name">Индекс</label>
                                                 </div>
                                                 <div class="account-adress-subwrap">
-                                                   <input id="contacts-name" class="contacts-input ">
-                                                   <label class="contacts-input__title" for="contacts-name">Ваше имя</label>
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Адрес или номер отделения">
+                                                   <label class="contacts-input__title" for="contacts-name">Адрес или номер отделения</label>
                                                 </div>
                                              </div>
-                                             <div class="account-adress-delete" data-da=".account-adress-functions,991.98,2">
+                                             <div class="account-adress-delete">
                                                 <button type="button"><img src="@img/icons/medium/bin.svg" alt="bin"><span>Удалить</span></button>
                                              </div>
                                           </div>
                                           <div class="account-adress-functions">
                                              <div class="account-adress-functions__add">
                                                 <button type="button"><img src="@img/icons/small/plus.svg" alt="plus">Добавить адрес</button>
+                                             </div>
+                                             <div class="account-adress-delete">
+                                                <button type="button"><img src="@img/icons/medium/bin.svg" alt="bin"><span>Удалить</span></button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="account-adress-main__wrapper">
+                                          <div class="account-adress-col">
+                                             <div class="account-adress-wrap">
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Страна">
+                                                   <label class="contacts-input__title" for="contacts-name">Страна</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Регион">
+                                                   <label class="contacts-input__title" for="contacts-name">Регион</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Город">
+                                                   <label class="contacts-input__title" for="contacts-name">Город</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Индекс">
+                                                   <label class="contacts-input__title" for="contacts-name">Индекс</label>
+                                                </div>
+                                                <div class="account-adress-subwrap">
+                                                   <input id="contacts-name" class="contacts-input " placeholder="Адрес или номер отделения">
+                                                   <label class="contacts-input__title" for="contacts-name">Адрес или номер отделения</label>
+                                                </div>
+                                             </div>
+                                             <div class="account-adress-delete">
+                                                <button type="button"><img src="@img/icons/medium/bin.svg" alt="bin"><span>Удалить</span></button>
+                                             </div>
+                                          </div>
+                                          <div class="account-adress-functions">
+                                             <div class="account-adress-functions__add">
+                                                <button type="button"><img src="@img/icons/small/plus.svg" alt="plus">Добавить адрес</button>
+                                             </div>
+                                             <div class="account-adress-delete">
+                                                <button type="button"><img src="@img/icons/medium/bin.svg" alt="bin"><span>Удалить</span></button>
                                              </div>
                                           </div>
                                        </div>
@@ -92,11 +139,265 @@
                                     </div>
                                  </div>
                               </div>
+                              <div class="account-login">
+                                 <a class="account-login__link" href="#"><img src="@img/icons/small/password.svg" alt="password"><span>Изменить пароль</span></a>
+                                 <a class="account-login__link" href="#"><img src="@img/icons/small/exit.svg" alt="exit"><span>Выйти</span></a>
+                              </div>
                            </div>
                            <div class="account-tabs__body">
-                              Вміст другого таба
+                              <div class="account-history">
+                                 <div class="account-history-block">
+                                    <div class="account-history-block__heading history-heading">
+                                       <p class="history-heading__number">Заказ №<span>232</span></p>
+                                       <p class="history-heading__date"><span>03.08.2024</span></p>
+                                       <p class="history-heading__status history-heading__status_work"><span>В работе</span></p>
+                                       <p class="history-heading__price"><span>1105.00 </span>$</p>
+                                    </div>
+                                    <div class="account-history-block__products history-products">
+                                       <div class="history-products__product">
+                                          <div class="history-products-wrapper">
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="history-products-delivery">
+                                             <button type="button" class="booking-delivery-block active">
+                                                <div class="booking-delivery-block__img">
+                                                   <span class="booking-delivery-block__img_np"></span>
+                                                </div>
+                                                <div class="booking-delivery-block__desc">
+                                                   <h4>Новой почтой</h4>
+                                                   <p><span>2.40</span> $</p>
+                                                </div>
+                                             </button>
+                                          </div>
+                                       </div>
+                                       
+                                    </div>
+                                 </div>
+                                 <div class="account-history-block">
+                                    <div class="account-history-block__heading history-heading">
+                                       <p class="history-heading__number">Заказ №<span>232</span></p>
+                                       <p class="history-heading__date"><span>03.08.2024</span></p>
+                                       <p class="history-heading__status history-heading__status_await"><span>Ожидает оплаты</span></p>
+                                       <p class="history-heading__price"><span>1105.00 </span>$</p>
+                                    </div>
+                                    <div class="account-history-block__products history-products">
+                                       <div class="history-products__product">
+                                          <div class="history-products-wrapper">
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="history-products-delivery">
+                                             <button type="button" class="booking-delivery-block active">
+                                                <div class="booking-delivery-block__img">
+                                                   <span class="booking-delivery-block__img_np"></span>
+                                                </div>
+                                                <div class="booking-delivery-block__desc">
+                                                   <h4>Новой почтой</h4>
+                                                   <p><span>2.40</span> $</p>
+                                                </div>
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="account-history-block">
+                                    <div class="account-history-block__heading history-heading">
+                                       <p class="history-heading__number">Заказ №<span>232</span></p>
+                                       <p class="history-heading__date"><span>03.08.2024</span></p>
+                                       <p class="history-heading__status history-heading__status_completed"><span>Выполнен</span></p>
+                                       <p class="history-heading__price"><span>1105.00 </span>$</p>
+                                    </div>
+                                    <div class="account-history-block__products history-products">
+                                       <div class="history-products__product">
+                                          <div class="history-products-wrapper">
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="history-products-delivery">
+                                             <button type="button" class="booking-delivery-block active">
+                                                <div class="booking-delivery-block__img">
+                                                   <span class="booking-delivery-block__img_np"></span>
+                                                </div>
+                                                <div class="booking-delivery-block__desc">
+                                                   <h4>Новой почтой</h4>
+                                                   <p><span>2.40</span> $</p>
+                                                </div>
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="account-history-block">
+                                    <div class="account-history-block__heading history-heading">
+                                       <p class="history-heading__number">Заказ №<span>232</span></p>
+                                       <p class="history-heading__date"><span>03.08.2024</span></p>
+                                       <p class="history-heading__status history-heading__status_canceled"><span>Отменен</span></p>
+                                       <p class="history-heading__price"><span>1105.00 </span>$</p>
+                                    </div>
+                                    <div class="account-history-block__products history-products">
+                                       <div class="history-products__product">
+                                          <div class="history-products-wrapper">
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                             <div class="history-products-wrapper__block history-block">
+                                                <div class="history-block-img">
+                                                   <img src="@img/cart/product1.png" alt="product">
+                                                </div>
+                                                <div class="history-block-desc">
+                                                   <p>Балка передняя поперечное усиление стаканов (съемная) Tesla model S 2016</p>
+                                                </div>
+                                                <div class="history-block-price">
+                                                   <p class="history-block-price__item"><span>400.00</span> $</p>
+                                                   <p class="history-block-price__count">x<span>1</span></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="history-products-delivery">
+                                             <button type="button" class="booking-delivery-block active">
+                                                <div class="booking-delivery-block__img">
+                                                   <span class="booking-delivery-block__img_np"></span>
+                                                </div>
+                                                <div class="booking-delivery-block__desc">
+                                                   <h4>Новой почтой</h4>
+                                                   <p><span>2.40</span> $</p>
+                                                </div>
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pages-nav-wrapper">
+                                 <div class="pages-pagination">
+                                    <button type="button" class="pages-pagination__prev" data-da=".pages-pagination,766.98,2"></button>
+                                    <ul class="pages-pagination-nav">
+                                       <li>
+                                          <a href="#" class="pages-pagination-nav__item active">1</a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="pages-pagination-nav__item">2</a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="pages-pagination-nav__item">3</a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="pages-pagination-nav__item">4</a>
+                                       </li>
+                                       <li>
+                                          <input type="text" placeholder="..." class="pages-pagination-nav__item">
+                                       </li>
+                                       <li>
+                                          <a href="#" class="pages-pagination-nav__item">78</a>
+                                       </li>
+                                    </ul>
+                                    <button type="button" class="pages-pagination__next active"></button>
+                                 </div>
+                                 <div class="pages-more">
+                                    <button type="button">Загрузить еще <span>9</span><img src="img/icons/small/reapit.svg" alt="reapit"></button>
+                                 </div>
+                              </div>
                            </div>
-                           
                         </div>
                      </div>
                   </div>
