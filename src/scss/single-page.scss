@@ -562,18 +562,18 @@
    }
    &__arrow {
       background: unset;
-      transform: translateY(0);
+      transform: translateY(0) !important;
       &--prev {
          background: url("@img/single-page/gallery/single-arrow-red.svg")
             no-repeat center !important;
          background-position: 50% 50%;
-         transform: rotate(180deg);
+         transform: rotate(180deg) !important;
          left: 10px !important;
          &:disabled {
             background: url("@img/single-page/gallery/single-arrow-gray.svg")
                no-repeat center !important;
             background-position: 50% 50%;
-            transform: rotate(0);
+            transform: rotate(0) !important;
             opacity: 1;
          }
       }
@@ -587,7 +587,7 @@
             background: url("@img/single-page/gallery/single-arrow-gray.svg")
                no-repeat center !important;
             background-position: 50% 50%;
-            transform: rotate(180deg);
+            transform: rotate(180deg) !important;
             opacity: 1;
          }
       }

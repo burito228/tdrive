@@ -5,13 +5,7 @@
    font-weight: 900;
    font-style: normal;
 }
-@font-face {
-   font-family: Gilroy;
-   font-display: swap;
-   src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
-   font-weight: 900;
-   font-style: normal;
-}
+
 @font-face {
    font-family: Gilroy;
    font-display: swap;
@@ -22,22 +16,24 @@
 @font-face {
    font-family: Gilroy;
    font-display: swap;
-   src: url("../fonts/Gilroy-Light.woff2") format("woff2");
-   font-weight: 300;
-   font-style: normal;
-}
-@font-face {
-   font-family: Gilroy;
-   font-display: swap;
    src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
    font-weight: 800;
    font-style: normal;
 }
+
 @font-face {
    font-family: Gilroy;
    font-display: swap;
-   src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2");
-   font-weight: 600;
+   src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
+   font-weight: 900;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Gilroy;
+   font-display: swap;
+   src: url("../fonts/Gilroy-Light.woff2") format("woff2");
+   font-weight: 300;
    font-style: normal;
 }
 
@@ -59,6 +55,13 @@
 @font-face {
    font-family: Gilroy;
    font-display: swap;
+   src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2");
+   font-weight: 600;
+   font-style: normal;
+}
+@font-face {
+   font-family: Gilroy;
+   font-display: swap;
    src: url("../fonts/Gilroy-Thin.woff2") format("woff2");
    font-weight: 100;
    font-style: normal;
@@ -70,6 +73,7 @@
    font-weight: 200;
    font-style: normal;
 }
+
 @font-face {
    font-family: icomoon;
    font-display: swap;
