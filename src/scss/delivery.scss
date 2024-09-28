@@ -1,8 +1,10 @@
 .delivery {
    @include adaptiveValue("padding-bottom", 130, 60);
    .char {
-      .delivery {
-         @include adaptiveValue("margin-top", 60, 30);
+      &__body-payment {
+         &:not(:last-of-type) {
+            @include adaptiveValue("margin-bottom", 60, 40);
+         }
       }
    }
    h1.payment__title {

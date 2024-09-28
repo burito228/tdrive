@@ -4,18 +4,26 @@
    @include adaptiveValue("padding-top", 70, 50);
 
    &__wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      justify-content: space-around;
       @media (max-width: $tablet) {
-         grid-template-columns: 1fr;
+         flex-direction: column;
          gap: 40px;
+      }
+      a {
+         transition: color 0.5s ease;
+         &:hover {
+            color: $red;
+         }
       }
    }
    &-logo {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin: 0 auto;
+      @media (max-width: $tablet) {
+         margin: 0 auto;
+      }
       @media (max-width: $mobileSmall) {
          margin: 0;
       }
@@ -31,15 +39,21 @@
          color: $placeholder;
          @include adaptiveValue("font-size", 14, 12);
          @media (max-width: $tablet) {
-            justify-content: space-between;
+            justify-content: center;
             flex-direction: unset;
             align-items: center;
+         }
+         @media (max-width: $mobileSmall) {
+            justify-content: space-between;
          }
       }
    }
    &-navigation {
       display: flex;
-      justify-content: space-evenly;
+      @include adaptiveValue("gap", 80, 10);
+      @media (max-width: $tablet) {
+         justify-content: center;
+      }
       @media (max-width: $mobileSmall) {
          justify-content: space-between;
       }
@@ -65,6 +79,13 @@
       }
    }
    &-contact {
+      @include adaptiveValue("width", 310, 290);
+      @media (max-width: $tablet) {
+         margin: 0 auto;
+      }
+      @media (max-width: $mobileSmall) {
+         margin: 0;
+      }
       &-phone {
          @include adaptiveValue("margin-bottom", 25, 30);
          @media (max-width: $tablet) {
@@ -93,6 +114,16 @@
          img {
             @include adaptiveValue("width", 25, 20);
             @include adaptiveValue("height", 25, 20);
+         }
+         i {
+            &::before {
+               transition: all 0.5s ease;
+            }
+         }
+         i:hover {
+            &::before {
+               color: #fff;
+            }
          }
       }
       &-graffic {

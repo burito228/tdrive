@@ -51,12 +51,13 @@ h1 {
    font-weight: 500;
    line-height: 140%;
    transition: all 0.5s ease;
-   padding: 20.5px 15px 5.5px;
+   padding: 10px 20px;
    @include adaptiveValue("font-size", 16, 14);
 
    &:focus {
       border-bottom: 1px solid $red;
       caret-color: $red;
+      padding: 30px 20px 10px 20px;
    }
    &:focus + &__title {
       opacity: 1;
@@ -73,10 +74,10 @@ h1 {
    &__title {
       color: $grayText;
       position: absolute;
-      top: 3px;
+      top: 10px;
       opacity: 0;
       transition: all 0.5s ease;
-      left: 15px;
+      left: 20px;
       line-height: 140%;
       font-weight: 500;
       @include adaptiveValue("font-size", 14, 12);
@@ -91,9 +92,9 @@ h1 {
    line-height: 140%;
    @include adaptiveValue("font-size", 16, 14);
    @media (max-width: $tablet) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 30px;
-      align-items: unset;
+      align-items: center;
    }
    .pages-pagination {
       display: flex;
@@ -188,4 +189,82 @@ h1 {
          @include adaptiveValue("font-size", 22, 17);
       }
    }
+}
+.popup-overlay,
+.popup-afterform {
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   display: none;
+   background-color: rgba(0, 0, 0, 0.8);
+   z-index: 10;
+}
+.popup-custom,
+.popup-after-custom {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 5px;
+   box-sizing: border-box;
+   background: $bgGray;
+   color: $black;
+   @include adaptiveValue("width", 520, 290);
+   .contacts-form__btn {
+      color: $mainColor;
+   }
+   .popup__content {
+      padding: 116px 40px 0;
+      visibility: unset;
+      transform: unset;
+      text-align: center;
+      h4 {
+         color: $red;
+         font-weight: 500;
+         line-height: 110%;
+         margin-bottom: 10px;
+         @include adaptiveValue("font-size", 48, 27);
+      }
+      p {
+         color: $black;
+         font-weight: 500;
+         line-height: 125%;
+         @include adaptiveValue("font-size", 22, 17);
+      }
+   }
+}
+.popup__h2 {
+   text-align: center;
+}
+.close-popup {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   width: 23px;
+   height: 23px;
+   cursor: pointer;
+}
+
+.close-popup:before {
+   content: "";
+   background-color: #fff;
+   position: absolute;
+   height: 1px;
+   width: 20px;
+   top: 11px;
+   left: -4px;
+   transform: rotate(-45deg);
+}
+
+.close-popup:after {
+   content: "";
+   background-color: #fff;
+   position: absolute;
+   height: 1px;
+   width: 20px;
+   top: 11px;
+   transform: rotate(45deg);
+   left: -4px;
 }

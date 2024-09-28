@@ -1,22 +1,25 @@
 <!doctype html>
 <html lang="en">
-   @@include('html/_head.htm',{ "title":"CatalogPage" })
+   @@include('html/_head.htm',{ "title":"ResultPage" })
    <body>
       <div class="wrapper">
          @@include('html/_header.htm',{})
-         <main class="catalog-page">
+         <main class="result-page">
                <div class="overlay"></div>
                <section class="breadcrumbs">
                   <div class="breadcrumbs__container">
                      <div class="breadcrumbs-nav">
                         <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
-                        <a href="catalog.html" class="breadcrumbs-nav__link active">Каталог</a>
+                        <a href="result.html" class="breadcrumbs-nav__link active">Поиск</a>
                      </div>
                   </div>
                </section>
-               <section class="catalog">
+               <section class="catalog result">
                   <div class="catalog__container">
-                     <h1 class="catalog__title">Каталог</h1>
+                     <div class="result-heading">
+                        <h1 class="catalog__title result__title">По запросу <span>«Балка передняя»</span></h1>
+                        <p class="result-heading__desc">Результатов <span>38</span></p>
+                     </div>
                      <div class="catalog-types">
                         <button class="catalog-types__btn active" type="button"><img src="@img/catalog/model.png" alt="model">Модель S <span>< 2016</span></button>
                         <button class="catalog-types__btn" type="button"><img src="@img/catalog/model-1.png" alt="model">Модель S <span>2016-2021</span></button>
@@ -1153,35 +1156,6 @@
                                        </div>
                                     </div>
                                  </div>
-                              </div>
-                           </div>
-                           <div class="pages-nav-wrapper">
-                              <div class="pages-pagination">
-                                 <button type="button" class="pages-pagination__prev" data-da=".pages-pagination,766.98,2"></button>
-                                 <ul class="pages-pagination-nav">
-                                    <li>
-                                       <a href="#" class="pages-pagination-nav__item active">1</a>
-                                    </li>
-                                    <li>
-                                       <a href="#" class="pages-pagination-nav__item">2</a>
-                                    </li>
-                                    <li>
-                                       <a href="#" class="pages-pagination-nav__item">3</a>
-                                    </li>
-                                    <li>
-                                       <a href="#" class="pages-pagination-nav__item">4</a>
-                                    </li>
-                                    <li>
-                                       <input type="text" placeholder="..." class="pages-pagination-nav__item">
-                                    </li>
-                                    <li>
-                                       <a href="#" class="pages-pagination-nav__item">78</a>
-                                    </li>
-                                 </ul>
-                                 <button type="button" class="pages-pagination__next active"></button>
-                              </div>
-                              <div class="pages-more">
-                                 <button type="button">Загрузить еще <span>9</span><img src="img/icons/small/reapit.svg" alt="reapit"></button>
                               </div>
                            </div>
                         </div>

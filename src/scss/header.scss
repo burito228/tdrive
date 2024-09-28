@@ -167,6 +167,8 @@ main {
          }
       }
       &__cart {
+         display: flex;
+         align-items: center;
          background: $red;
          position: relative;
          @include adaptiveValue("padding", 16, 12.5);
@@ -217,9 +219,6 @@ main {
          color: #313b45;
          line-height: calc(140 / 100 * 24px);
          @include adaptiveValue("font-size", 24, 17);
-         @media (min-width: $tablet) {
-            display: none;
-         }
          @media (max-width: $tablet) {
             color: $black;
          }
@@ -228,7 +227,7 @@ main {
          display: flex;
          gap: 5px;
          align-items: center;
-         a {
+         button {
             color: $red;
             transition: color 0.5s ease;
             @include adaptiveValue("font-size", 16, 12);
@@ -242,8 +241,22 @@ main {
       }
    }
 }
-.sub-menu-open .preheader {
-   background: $bgGray;
+.sub-menu-open .header {
+   &::before {
+      content: "";
+      width: 100%;
+      height: 35px;
+      display: block;
+      position: absolute;
+      top: 15px;
+      z-index: -1;
+      background: $bgGray;
+   }
+   @media (max-width: $tablet) {
+      &::before {
+         display: none;
+      }
+   }
 }
 .preheader {
    display: flex;
@@ -264,12 +277,23 @@ main {
             justify-content: space-between;
             flex-wrap: wrap;
          }
+         @media (max-width: 550px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+         }
+         li {
+            &:nth-child(4) {
+               grid-row: 1;
+               grid-column: 2;
+            }
+         }
          a {
-            color: $grayText;
+            color: $black;
             font-weight: 400;
             transition: all 0.5s ease;
             &:hover {
-               text-decoration: underline;
+               color: #1c1b22;
             }
          }
       }
@@ -304,9 +328,6 @@ main {
    font-weight: 500;
    @media (max-width: $tablet) {
       justify-content: center;
-   }
-   .header-phone__title {
-      display: none;
    }
    &__logo {
       transition: all 0.5s ease;
@@ -710,9 +731,26 @@ main {
          line-height: 140%;
          cursor: pointer;
          padding: 12px 20px;
+         display: inline-flex;
+         justify-content: space-between;
+         align-items: center;
+         &::after {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            transition: all 0.5s ease;
+            background: url("@img/header/icon/gray-arrow.svg") no-repeat center
+               right;
+         }
          &:hover {
             color: $red;
             background: $bgGray;
+            &::after {
+               transform: rotate(-90deg);
+               background: url("@img/header/arrow-down-red.svg") no-repeat
+                  center right;
+            }
          }
       }
    }
@@ -727,11 +765,17 @@ main {
          top: 0;
          padding-top: 15px;
          border-right: 1px solid $bgGray;
+         li {
+            width: 100%;
+         }
          li ul {
             right: -100%;
             top: 0;
             height: 100%;
             border-right: unset;
+            li {
+               width: 100%;
+            }
          }
          li:hover > ul {
             display: block;

@@ -4870,7 +4870,7 @@
          </div>
          <div class="header-main">
             <div class="header-main__logo" data-da=".preheader,991.98,0">
-               <a href="#">
+               <a href="index.html">
                   <img src="@img/header/logo.png" alt="logo" />
                </a>
             </div>
@@ -9236,10 +9236,70 @@
                   <p class="header-phone__title">38 (068) 977 88 88</p>
                   <div class="header-phone__link">
                      <img src="@img/icons/small/phone.svg" alt="phone" />
-                     <a href="tel:380689778888">Заказать звонок</a>
+                     <button type="button" class="header-phone__link_poup">
+                        Заказать звонок
+                     </button>
                   </div>
                </div>
             </div>
+         </div>
+      </div>
+   </div>
+   <div class="popup-overlay">
+      <div class="popup-custom">
+         <div class="close-popup"></div>
+         <div class="contacts-form">
+            <h2 class="contacts-form__title">
+               Оставьте свои данные и мы вам перезвоним
+            </h2>
+            <form action="#">
+               <div class="contacts-form-wrapper">
+                  <div class="contacts-form-block">
+                     <input
+                        id="contacts-name"
+                        class="contacts-input"
+                        placeholder="Ваше имя"
+                     />
+                     <label class="contacts-input__title" for="contacts-name"
+                        >Ваше имя</label
+                     >
+                  </div>
+                  <div class="contacts-form-block">
+                     <input
+                        id="contacts-num"
+                        data-inputmask="'mask': '+38 (999) 999 99 99' "
+                        class="contacts-input"
+                        placeholder="Номер телефона"
+                        inputmode="text"
+                     />
+                     <label class="contacts-input__title" for="contacts-num"
+                        >Номер телефона</label
+                     >
+                  </div>
+               </div>
+               <button
+                  type="submit"
+                  id="popup-phone"
+                  class="contacts-form__btn"
+               >
+                  Отправить
+               </button>
+            </form>
+            <div class="contacts-form-info">
+               <p>
+                  <span>*</span>Нажимая на кнопку, Вы соглашаетесь с
+                  <a href="#">Политикой конфиденциальности</a>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="popup-afterform">
+      <div class="popup-after-custom">
+         <div class="popup__content">
+            <h4 class="payment-block__title">Успех!</h4>
+            <p class="payment-block__desc">Ваше сообщение успешно отправлено</p>
+            <img src="img/contacts/done.png" alt="done" />
          </div>
       </div>
    </div>

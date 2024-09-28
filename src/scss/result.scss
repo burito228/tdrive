@@ -1,0 +1,21 @@
+.result {
+   &__title {
+      span {
+         color: $red;
+      }
+   }
+   &-heading {
+      display: flex;
+      align-items: baseline;
+      @include adaptiveValue("gap", 30, 10);
+      @media (max-width: $mobile) {
+         flex-direction: column-reverse;
+      }
+      &__desc {
+         color: $red;
+         font-weight: 500;
+         line-height: 150%;
+         @include adaptiveValue("font-size", 18, 12);
+      }
+   }
+}

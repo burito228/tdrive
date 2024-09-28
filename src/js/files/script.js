@@ -231,3 +231,39 @@ if (selector) {
    var im = new Inputmask("99-9999999");
    im.mask(selector);
 }
+
+//Popup
+$(".header-phone__link_poup").click(function () {
+   $(".popup-overlay").fadeIn();
+});
+
+// Закрытие окна на крестик
+$(".close-popup").click(function () {
+   $(".popup-overlay").fadeOut();
+});
+
+// Закрытие окна на поле
+$(document).mouseup(function (e) {
+   var popup = $(".popup-custom");
+   if (e.target != popup[0] && popup.has(e.target).length === 0) {
+      $(".popup-overlay").fadeOut();
+   }
+});
+
+$("#popup-phone").click(function () {
+   $(".popup-afterform").fadeIn();
+   $(".popup-overlay").fadeOut();
+});
+
+// Закрытие окна на крестик
+$(".close-popup").click(function () {
+   $(".popup-afterform").fadeOut();
+});
+
+// Закрытие окна на поле
+$(document).mouseup(function (e) {
+   var popup = $(".popup-after-custom");
+   if (e.target != popup[0] && popup.has(e.target).length === 0) {
+      $(".popup-afterform").fadeOut();
+   }
+});

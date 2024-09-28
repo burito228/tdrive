@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+   @@include('html/_head.htm',{ "title":"NotFound" })
+   <body>
+      <div class="wrapper">
+         @@include('html/_header.htm',{})
+         <main class="cart-page">
+               <div class="overlay"></div>
+               <section class="breadcrumbs">
+                  <div class="breadcrumbs__container">
+                     <div class="breadcrumbs-nav">
+                        <a href="index.html" class="breadcrumbs-nav__link">Главная</a>
+                        <a href="404.html" class="breadcrumbs-nav__link active">404</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="notfound">
+                  <div class="notfound__container">
+                     <div class="notfound__wrapper">
+                        <img src="@img/404/404.png" alt="Image" class="notfound__image">
+                        <div class="notfound__main">
+                        <div class="notfound__logo">Упс!</div>
+                        <div class="notfound__text">Неправильно набран адрес, или такой
+                           страницы больше не существует</div>
+                           <a href="index.html" class="notfound__back">На главную</a>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </main>
+         @@include('html/_footer.htm',{})
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>

@@ -1,0 +1,80 @@
+.polytics {
+   @include adaptiveValue("padding-bottom", 130, 60);
+   &-wrapper {
+      margin: 0 auto;
+      @include adaptiveValue("width", 1034, 290);
+   }
+   &-info {
+      &-block {
+         &:not(:last-of-type) {
+            margin-bottom: 35px;
+         }
+         &__wrapper {
+            &:not(:last-of-type) {
+               margin-bottom: 30px;
+            }
+            &_title {
+               color: $black;
+               line-height: 125%;
+               margin-bottom: 15px;
+               font-weight: 500;
+               @include adaptiveValue("font-size", 22, 17);
+            }
+         }
+         &__title {
+            color: $black;
+            font-weight: 500;
+            line-height: 150%;
+            margin-bottom: 25px;
+            @include adaptiveValue("font-size", 36, 21);
+         }
+         &__text {
+            display: flex;
+            gap: 10px;
+            line-height: 150%;
+            @include adaptiveValue("font-size", 18, 14);
+            &:not(:last-of-type) {
+               margin-bottom: 20px;
+            }
+            &_number {
+               color: $red;
+               font-weight: 500;
+            }
+            &_desc {
+               color: $grayText;
+               font-weight: 400;
+               &:not(:last-of-type) {
+                  margin-bottom: 20px;
+               }
+            }
+            &_wrapper {
+               ul {
+                  margin-top: 20px;
+                  li {
+                     position: relative;
+                     color: $black;
+                     line-height: 150%;
+                     font-weight: 400;
+                     @include adaptiveValue("font-size", 18, 14);
+                     &:not(:last-of-type) {
+                        margin-bottom: 20px;
+                     }
+                     &::before {
+                        content: "";
+                        position: absolute;
+                        top: 10px;
+                        left: -15px;
+                        width: 4px;
+                        height: 4px;
+                        display: block;
+                        margin-right: 10px;
+                        background: $red;
+                        border-radius: 100px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
